@@ -17,7 +17,7 @@ length = 100   #of shortest pipe
 while True:
     #Print 5 digits to the right of the decimal point.
     #(Can't manufacture the pipes to any greater level of precision.)
-    print("{:2}   {:.5f} inches".format(i, length))
+    print(f"{i:2}   {length:.5f} inches")
     if length >= 200:
         break
     i += 1
