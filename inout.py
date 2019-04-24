@@ -15,10 +15,10 @@ except EOFError:
 try:
     years = float(years)
 except ValueError:
-    print("Sorry,", years, "is not a number.")
+    print(f"Sorry, {years} is not a number.")
     years = 0.0
-    print("I'll assume your age is", years, "years.")
+    printf(f"I'll assume your age is {years} years.")
 
 dogYears = round(years / 7)
-print("That's about", dogYears, "dog years!")
+print(f"That's about {dogYears} dog years!")
 sys.exit(0)
