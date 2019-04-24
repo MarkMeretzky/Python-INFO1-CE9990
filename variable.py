@@ -11,6 +11,6 @@ i = 10
 j = 20
 sum = i + j
 
-print("The sum of ", i, " and ", j, " is ", sum, ".", sep = "")
+print("The sum of i and j is sum.")
 print(f"The sum of {i} and {j} is {sum}.")
 sys.exit(0)
