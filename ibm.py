@@ -39,9 +39,8 @@ if not "Fz(36px)" in s:
 #Remove the "Fz(36px)" and everything before it.
 s = re.sub(r".*Fz\(36px\)", "", s, count = 1, flags = re.DOTALL)
 
-#Remove the rest of the tag that contained the "Fz(36px)",
-#and the following tag.
-s = re.sub(r"[^>]*><[^>]*>", "", s, count = 1)
+#Remove the rest of the tag that contained the "Fz(36px)".
+s = re.sub(r"[^>]*>", "", s, count = 1)
 
 #Remove everything after the price.
 s = re.sub(r"<.*", "", s, count = 1, flags = re.DOTALL)
