@@ -8,6 +8,6 @@ import sys
 
 kk = input("Tell me a knock-knock joke. ")
 name = input("Who's there? ")
-punchline = input(name + " who? ")
-print("Ha" + 5 * "ha" + "!")
+punchline = input(f"{name} who? ")
+print(f"Ha{5 * 'ha'}!")
 sys.exit(0)
