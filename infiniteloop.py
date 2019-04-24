@@ -4,7 +4,6 @@ infiniteloop.py
 Output a never-ending story.
 """
 
-import sys
 import time
 
 while True:
@@ -14,5 +13,3 @@ while True:
     print()
 
     time.sleep(3)   #Do nothing for 3 seconds.
-
-sys.exit(0)
