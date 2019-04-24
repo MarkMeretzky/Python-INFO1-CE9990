@@ -6,7 +6,7 @@ exit status 1 if it was < 168.00.
 Produce exit status 2 if we could not get the price.
 
 To avoid the SSL: CERTIFICATE_VERIFY_FAILED error on macOS, run
-Applications -> Python 3.6 -> Install Certificates.command
+Applications -> Python 3.7 -> Install Certificates.command
 """
 
 import sys
