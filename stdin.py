@@ -10,6 +10,6 @@ import sys
 
 first = input("What is your first name? ")
 last = input("What is your last name? ")
-print("Hello, ", first, " ", last, ".", sep = "")
+print("Hello, {first} {last}.")
 
 sys.exit(0)
