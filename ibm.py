@@ -52,7 +52,7 @@ except ValueError:
 
 #Uncomment this line to print the price with 2 digits to right of decimal point.
 #The first "f" stands for "formatted string"; the second "f" for "float".
-print(f"{price:.2f}")
+#print(f"{price:.2f}")
 
 if price >= 168.00:
     sys.exit(0)   #success
