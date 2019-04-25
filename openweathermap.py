@@ -1,8 +1,8 @@
 """
 openweathermap.py
 
-Download the current weather for zipcode 10036.
-10036 is the zipcode of 11 West 42nd Street.
+Download the current weather for zipcode 10004.
+10004 is the zipcode of 25 Broadway.
 "imperial" means fahrenheit, not celsius.
 mode can be json, xml, or html.
 See
@@ -14,7 +14,7 @@ import urllib.request
 import json
 
 url = "http://api.openweathermap.org/data/2.5/weather" \
-    "?q=10036,US" \
+    "?q=10004,US" \
     "&units=imperial" \
     "&mode=json" \
     "&APPID=532d313d6a9ec4ea93eb89696983e369"
@@ -31,7 +31,7 @@ infile.close()
 try:
     s = sequenceOfBytes.decode("utf-8") #s is a string.
 except UnicodeError as unicodeError:
-    print(unicodeError)
+    print(" UnicodeError", unicodeError)
     sys.exit(1)
 
 print(s)
@@ -40,7 +40,7 @@ print()
 try:
     dictionary = json.loads(s)          #dictionary is a dictionary.
 except json.JSONDecodeError as jSONDecodeError:
-    print(jSONDecodeError)
+    print("json.JSONDecodeError", jSONDecodeError)
     sys.exit(1)
 
 print(dictionary)
@@ -50,7 +50,7 @@ print()
 try:
     print(json.dumps(dictionary, indent = 4, sort_keys = True))
 except TypeError as typeError:
-    print(typeError)
+    print("TypeError", typeError)
     sys.exit(1)
 print()
 
@@ -72,8 +72,8 @@ except KeyError:
     print("main has no key named temp")
     sys.exit(1)
 
-print("temperature = {}° Fahrenheit".format(temp))
+print(f"temperature = {temp}° Fahrenheit")
 
 #Throw caution to the winds.
-print("temperature = {}° Fahrenheit".format(dictionary["main"]["temp"]))
+print(f'temperature = {dictionary["main"]["temp"]}° Fahrenheit')
 sys.exit(0)
