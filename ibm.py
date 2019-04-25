@@ -28,12 +28,12 @@ infile.close()
 try:
     s = sequenceOfBytes.decode("utf-8")
 except UnicodeError as error:
-    print("UnicodeError", unicodeError)
+    print("UnicodeError", error)
     sys.exit(2)
 
 #The stock price is the only 36-point text in this web page.
 if not "Fz(36px)" in s:
-    print("page did not contain \"Fz(36px)\"")
+    print("web page did not contain \"Fz(36px)\"")
     sys.exit(2)
 
 #Remove the "Fz(36px)" tag and everything before it.
