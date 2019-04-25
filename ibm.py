@@ -27,12 +27,13 @@ infile.close()
 #Convert the sequence of bytes into a string of characters.
 try:
     s = sequenceOfBytes.decode("utf-8")
-except UnicodeError as unicodeError:
-    print(unicodeError)
+except UnicodeError as error:
+    print("UnicodeError", unicodeError)
     sys.exit(2)
 
 #The stock price is the only 36-point text in this web page.
 if not "Fz(36px)" in s:
+    print("page did not contain \"Fz(36px)\"")
     sys.exit(2)
 
 #Remove the "Fz(36px)" tag and everything before it.
@@ -44,7 +45,8 @@ s = re.sub(r"<.*", "", s, count = 1, flags = re.DOTALL)
 
 try:
     price = float(s)
-except ValueError:
+except ValueError as error:
+    print("ValueError", error)
     sys.exit(2)
 
 #Uncomment this line to print the price with 2 digits to right of decimal point.
