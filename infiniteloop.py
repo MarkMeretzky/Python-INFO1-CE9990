@@ -10,6 +10,6 @@ while True:
     print("It was a dark and stormy night.")
     print("Some Indians were sitting by a campfire.")
     print("Then their chief rose and said,")
-    print()
+    print()   #Skip a line.
 
     time.sleep(3)   #Do nothing for 3 seconds.
