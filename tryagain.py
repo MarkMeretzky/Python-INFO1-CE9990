@@ -24,6 +24,7 @@ while True:
 #Arrive here when the loop is finished.
 print()   #Skip a line.
 print(f"Thank you for typing in the number {f}.")
+
 mantissa, exponent = math.frexp(f)
 print(f"Its mantissa is {mantissa} and its exponent is {exponent}.")
 print(f"{f} = {mantissa} * 2 ** {exponent} = {mantissa} * {2 ** exponent}")
