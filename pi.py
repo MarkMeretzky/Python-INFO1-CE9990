@@ -12,17 +12,15 @@ import sys
 import random
 import math
 
-n = 10_000_000   #how many pairs of random numbers.  Underscores ignored.
-count = 0
+n = 10_000_000 #how many random points.  Underscores ignored.
+count = 0      #how many random points fell within the circle
 
-i = 0
-while i < n:
+for i in range(n):
     x = random.random()         #a random number in the range 0 <= x < 1
     y = random.random()         #another random number in the same range
     distance = math.hypot(x, y) #distance from (0, 0) to (x, y)
     if distance <= 1:           #if the point (x, y) is in or on the circle,
         count += 1
-    i += 1
 
 estimatedPi = 4 * count / n     #4 is the area of the 2 by 2 square
 print(f"estimated pi = {estimatedPi}")
