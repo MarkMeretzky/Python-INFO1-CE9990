@@ -1,5 +1,5 @@
 """
-if.C
+if.py
 
 Demonstrate the if statement.
 """
