@@ -15,8 +15,8 @@ clinton = int(clinton)
 print()   #Skip a line.
 
 if trump == clinton:
-    print("They're tied.  Please inform the House of Representatives")
-    print("that the Electoral College is hung.")
+    print("They're tied.")
+    print("Please inform the House of Representatives that the Electoral College is hung.")
 else:
     print("There's a clear winner.")
     print("Thank you, electorate.")
