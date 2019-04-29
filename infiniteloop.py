@@ -4,7 +4,7 @@ infiniteloop.py
 Output a never-ending story.
 """
 
-import time
+import time   #Don't need to import sys.
 
 while True:
     print("It was a dark and stormy night.")
