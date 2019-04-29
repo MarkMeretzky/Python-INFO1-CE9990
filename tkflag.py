@@ -20,21 +20,14 @@ root.geometry(str(width) + "x" + str(height))
 #highlightthickness = 0 allows the canvas to occupy the entire root.
 canvas = tkinter.Canvas(root, highlightthickness = 0)
 
-y = 0
-while y < height:
-
-    x = 0
-    while x < width:
-
+for y in range(height):
+    for x in range(width):
         if x < width * 2/5 and y < 7 * stripeHeight:
             canvas.create_rectangle(x, y, x + 1, y + 1, width = 0, fill = "blue")
         elif y % (2 * stripeHeight) < stripeHeight:
             canvas.create_rectangle(x, y, x + 1, y + 1, width = 0, fill = "red")                                     
         else:
             canvas.create_rectangle(x, y, x + 1, y + 1, width = 0, fill = "white")
-
-        x += 1
-    y += 1
 
 #Make the canvas visible by packing it into the root.
 canvas.pack(expand = tkinter.YES, fill = "both")
