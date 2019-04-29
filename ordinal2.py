@@ -15,16 +15,16 @@ except EOFError:
 try:
     n = int(n)
 except ValueError:
-    print("Sorry,", n, "is not a whole number.")
+    print(f"Sorry {n} is not a whole number.")
     sys.exit(1)
 
 if n <= 0:
-    print("Sorry,", n, "is not a positive whole number.")
+    print(f"Sorry, {n} is not a positive whole number.")
     sys.exit(1)
 
 lastDigit = n % 10
 last2Digits = n % 100
-print("The ordinal form of", n, "is", n, end = "")
+print(f"The ordinal form of {n} is {n}", end = "")
 
 if 11 <= last2Digits and last2Digits <= 13:
     print("th", end = "")
