@@ -6,14 +6,13 @@ Output the lyrics to "A Hundred Bottles of Beer on the Wall.
 
 import sys
 
-b = 100
-
-while b > 0:
-    print(b , "bottles of beer on the wall,")
-    print(b , "bottles of beer on the wall--")
+for b in range(100, -1, -1):
+    print(f"{b} bottles of beer on the wall,")
+    print(f"{b} bottles of beer on the wall--")
     print("If one of those bottles should happen to fall,")
-    print(b - 1, "bottles of beer on he wall.")
+    print(f"{b} bottles of beer on the wall.")
+
     print()
-    b -= 1
+    #time.sleep(3)
 
 sys.exit(0)
