@@ -15,7 +15,7 @@ except EOFError:
 try:
     n = int(n)
 except ValueError:
-    print(f"Sorry, {n}is not a whole number.")
+    print(f"Sorry, {n} is not a whole number.")
     sys.exit(1)
 
 if n <= 0:
