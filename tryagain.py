@@ -23,9 +23,16 @@ while True:
 
 #Arrive here when the loop is finished.
 print()   #Skip a line.
-print(f"Thank you for typing in the number {f}.")
+print(f"Thank you for typing in the float number {f}.")
 
 mantissa, exponent = math.frexp(f)
-print(f"Its mantissa is {mantissa} and its exponent is {exponent}.")
-print(f"{f} = {mantissa} * 2 ** {exponent} = {mantissa} * {2 ** exponent}")
+dig = sys.float_info.mant_dig   #number of binary digits in the mantissa
+
+paragraph=f"""\
+It is stored internally as the pair of integers {mantissa * 2**dig:.0f} and {exponent}.
+{f} = ({mantissa * 2 ** dig:.0f} / (2 ** {dig})) * (2 ** {exponent}) = {mantissa} * {2 ** exponent}
+The fraction {mantissa * 2 ** dig:.0f} / (2 ** {dig}) is the mantissa.
+The number {exponent} is the exponent."""
+
+print(paragraph)
 sys.exit(0)
