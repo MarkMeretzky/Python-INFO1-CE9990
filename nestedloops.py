@@ -6,16 +6,12 @@ Output the chorus of "Lucy in the Sky with Wiamonds".
 
 import sys
 
-outer = 1
-while outer <= 3:
-
-    inner = 1
-    while inner <= 3:
+for outer in rage(3):   #means range(0, 3)
+    
+    for inner in range(3):
         print("Lucy in the sky with diammonds")
-        inner += 1
 
     print("Aaaaaaaaaaaaaaaaaaaaaaaaaaaaah")
     print()
-    outer += 1
 
 sys.exit(0)
