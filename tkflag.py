@@ -23,11 +23,13 @@ canvas = tkinter.Canvas(root, highlightthickness = 0)
 for y in range(height):
     for x in range(width):
         if x < width * 2/5 and y < 7 * stripeHeight:
-            canvas.create_rectangle(x, y, x + 1, y + 1, width = 0, fill = "blue")
+            color = "blue"
         elif y % (2 * stripeHeight) < stripeHeight:
-            canvas.create_rectangle(x, y, x + 1, y + 1, width = 0, fill = "red")                                     
+            color = "red"                                     
         else:
-            canvas.create_rectangle(x, y, x + 1, y + 1, width = 0, fill = "white")
+            color = "white"
+        
+        canvas.create_rectangle(x, y, x + 1, y + 1, width = 0, fill = color)
 
 #Make the canvas visible by packing it into the root.
 canvas.pack(expand = tkinter.YES, fill = "both")
