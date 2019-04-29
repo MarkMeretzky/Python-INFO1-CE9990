@@ -18,5 +18,5 @@ while p < 1000000:   #Test at the top of the loop.
     p *= 2   #means p = p * 2
 
 print()   #Skip a line (i.e., output a line consisting only of one newline).
-print(f"The log to the base 2 of 1000000 is {math.log(1000000, 2)}")
+print(f"The log to the base 2 of 1,000,000 is {math.log(1_000_000, 2)}")
 sys.exit(0)
