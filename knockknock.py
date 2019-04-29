@@ -6,8 +6,20 @@ Invite the user to tell a knock-knock joke.  Laugh appreciatively.
 
 import sys
 
-kk = input("Tell me a knock-knock joke. ")
-name = input("Who's there? ")
-punchline = input(f"{name} who? ")
+try:
+    kk = input("Tell me a knock-knock joke. ")
+except EOFError:
+    sys.exit(1)
+
+try:
+    name = input("Who's there? ")
+except EOFError:
+    sys.exit(1)
+
+try:
+    punchline = input(f"{name} who? ")
+except EOFError:
+    sys.exit(1)
+
 print(f"Ha{5 * 'ha'}!")
 sys.exit(0)
