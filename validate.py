@@ -16,13 +16,13 @@ while True:
     try:
         i = int(s)
     except ValueError:
-        print("Sorry,", s, "is not an integer.")
+        print(f"Sorry, {s} is not an integer.")
         continue   #Go back up to the word while.
 
     if 1 <= i and i <= 10:
         break      #Break out of the loop.
 
-    print("Sorry,", i, "is not in the range 1 to 10 inclusive.")
+    print(f"Sorry, {i} is not in the range 1 to 10 inclusive.")
 
-print("Thank you. ", i, "is acceptable.")
+print(f"Thank you. {i} is acceptable.")
 sys.exit(0)
