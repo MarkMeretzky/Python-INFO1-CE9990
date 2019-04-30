@@ -26,12 +26,13 @@ print()   #Skip a line.
 print(f"Thank you for typing in the float number {f}.")
 
 mantissa, exponent = math.frexp(f)
-dig = sys.float_info.mant_dig   #number of binary digits in the mantissa
+numerator = int(mantissa * 2 ** dig) #the numerator of the mantissa
+dig = sys.float_info.mant_dig        #number of binary digits in the mantissa
 
 paragraph=f"""\
-It is stored internally as the pair of integers {mantissa * 2**dig:.0f} and {exponent}.
-{f} = ({mantissa * 2 ** dig:.0f} / (2 ** {dig})) * (2 ** {exponent}) = {mantissa} * {2 ** exponent}
-The fraction {mantissa * 2 ** dig:.0f} / (2 ** {dig}) is the mantissa.
+It is stored internally as the pair of integers {numerator:,} and {exponent}.
+{f} = ({numerator:,} / (2 ** {dig})) * (2 ** {exponent}) = {mantissa} * {2 ** exponent}
+The fraction {numerator:,} / (2 ** {dig}) is the mantissa.
 The number {exponent} is the exponent."""
 
 print(paragraph)
