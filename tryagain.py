@@ -33,7 +33,7 @@ paragraph=f"""\
 It is stored internally as the pair of integers {numerator:,} and {exponent}.
 {f} = ({numerator:,} / (2 ** {dig})) * (2 ** {exponent}) = {mantissa} * {2 ** exponent}
 The fraction {numerator:,} / (2 ** {dig}) is the mantissa.
-The number {exponent} is the exponent."""
+The integer {exponent} is the exponent."""
 
 print(paragraph)
 sys.exit(0)
