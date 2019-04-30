@@ -26,8 +26,8 @@ print()   #Skip a line.
 print(f"Thank you for typing in the float number {f}.")
 
 mantissa, exponent = math.frexp(f)
-numerator = int(mantissa * 2 ** dig) #the numerator of the mantissa
 dig = sys.float_info.mant_dig        #number of binary digits in the mantissa
+numerator = int(mantissa * 2 ** dig) #the numerator of the mantissa
 
 paragraph=f"""\
 It is stored internally as the pair of integers {numerator:,} and {exponent}.
