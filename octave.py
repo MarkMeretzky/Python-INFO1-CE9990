@@ -12,7 +12,7 @@ import sys
 factor = 2 ** (1/12)
 
 i = 0
-length = 100   #of shortest pipe
+length = 100.0   #of shortest pipe
 
 while True:
     #Print 5 digits to the right of the decimal point.
