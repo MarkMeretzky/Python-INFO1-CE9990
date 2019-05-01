@@ -15,7 +15,7 @@ filename = "/Library/Frameworks/Python.framework/Versions/3.7/share/doc/python3.
 try:
     lines = open(filename)
 except FileNotFoundError:
-    print(f"Sorry, could not find file \"{filename}"\.")
+    print(f"Sorry, could not find file \"{filename}\".")
     sys.exit(1)
 except PermissionError:
     print(f"Sorry, no permission to open file \"{filename}\".")
