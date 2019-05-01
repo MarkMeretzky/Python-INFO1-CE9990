@@ -23,16 +23,15 @@ if n <= 0:
     sys.exit(1)
 
 lastDigit = n % 10
-print(f"The ordinal form of {n} is {n}", end = "")
 
 if lastDigit == 1:
-    print("st", end = "")
+    suffix = "st"
 elif lastDigit == 2:
-    print("nd", end = "")
+    suffix = "nd"
 elif lastDigit == 3:
-    print("rd", end = "")
+    suffix = "rd"
 else:
-    print("th", end = "")   #all other numbers
-
-print(".")
+    suffix = "th"   #all other numbers
+    
+print(f"The ordinal form of {n} is {n}{suffix}.")
 sys.exit(0)
