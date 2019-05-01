@@ -24,18 +24,17 @@ if n <= 0:
 
 lastDigit = n % 10
 last2Digits = n % 100
-print(f"The ordinal form of {n} is {n}", end = "")
 
-if 11 <= last2Digits and last2Digits <= 13:
-    print("th", end = "")
+if 11 <= last2Digits and last2Digits <= 13: #or if 11 <= last2Digits <= 13:
+    suffix = "th"
 elif lastDigit == 1:
-    print("st", end = "")
+    suffix = "st"
 elif lastDigit == 2:
-    print("nd", end = "")
+    suffix = "nd"
 elif lastDigit == 3:
-    print("rd", end = "")
+    suffix = "rd"
 else:
-    print("th", end = "")   #all other numbers
+    suffix = "th"   #all other numbers
 
-print(".")
+print(f"The ordinal form of {n} is {n}{suffix}.")
 sys.exit(0)
