@@ -15,7 +15,7 @@ while True:
     try:
         year = int(year)
     except ValueError:
-        print("Sorry,", year, "is not an integer.")
+        print(f"Sorry, {year} is not an integer.")
         continue
 
     remainder = year % 12   #remainder is an integer in the range 0 to 11 inclusive
@@ -48,4 +48,4 @@ while True:
         print("bad remainder", remainder)
         sys.exit(1)
 
-    print(year, " was the year of the ", animal, ".", sep = "")
+    print(f"{year} was the year of the {animal}.")
