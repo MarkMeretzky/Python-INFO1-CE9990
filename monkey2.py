@@ -31,9 +31,9 @@ while True:
     try:
         year = int(year)
     except ValueError:
-        print("Sorry,", year, "is not an integer.")
+        print(f"Sorry, {year} is not an integer.")
         continue
 
     remainder = year % n   #remainder is an integer in the range 0 to n-1 inclusive
     animal = animals[remainder]
-    print(year, " was the year of the ", animal, ".", sep = "")
+    print(f"{year} was the year of the {animal}.")
