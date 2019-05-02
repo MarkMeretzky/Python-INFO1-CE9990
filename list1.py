@@ -21,13 +21,13 @@ december = 31
 
 n = 12   #Have to count them yourself.
 
-print("A year has", n, "months.")
-print("The first month has", january, "days.")
-print("The second month has", february, "days.")
-print("The third month has", february, "days.")
+print(f"A year has {n} months.")
+print(f"The first month has {january} days.")
+print(f"The second month has {february} days.")
+print(f"The third month has {february} days.")
 
-print("The last month month has", december, "days.")
-print("The next-to-last month month has", november, "days.")
-print("The third-to-last month month has", october, "days.")
+print(f"The last month month has {december} days.")
+print(f"The next-to-last month month has {november} days.")
+print(f"The third-to-last month month has {october} days.")
 
 sys.exit(0)
