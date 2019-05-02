@@ -12,14 +12,14 @@ url = "http://oit2.scps.nyu.edu/~meretzkm/python/string/romeo.txt"
 try:
     lines = urllib.request.urlopen(url)
 except urllib.error.URLError as error:
-    print("urllib.error.URLError", error)
+    print(f"urllib.error.URLError: {error}")
     sys.exit(1)
 
 for line in lines:
     try:
         s = line.decode("utf-8") #Convert sequence of bytes to string of characters.
     except UnicodeError as unicodeError:
-        print(unicodeError)
+        print(f"UnicodeError: {unicodeError}")
         sys.exit(1)
 
     print(s, end = "")           #s already ends with a newline.
