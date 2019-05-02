@@ -23,14 +23,14 @@ months = [
 
 n = len(months)   #Don't have to count them yourself.
 
-print("A year has", n, "months.")
-print("The first month has", months[0], "days.")
-print("The second month has", months[1], "days.")
-print("The third month has", months[2], "days.")
-print("The twelfth month has", months[11], "days.")
+print(f"A year has {n} months.")
+print(f"The first month has {months[0]} days.")
+print(f"The second month has {months[1]} days.")
+print(f"The third month has {months[2]} days.")
+print(f"The twelfth month has {months[11]} days.")
 
-print("The last month has", months[-1], "days.")
-print("The next-to-last month has", months[-2], "days.")
-print("The third-to-last month has", months[-3], "days.")
+print(f"The last month has {months[-1]} days.")
+print(f"The next-to-last month has {months[-2]} days.")
+print(f"The third-to-last month has {months[-3]} days.")
 
 sys.exit(0)
