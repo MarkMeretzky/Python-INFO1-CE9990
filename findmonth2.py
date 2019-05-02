@@ -31,9 +31,9 @@ n = len(months)
 
 for i in range(1, n):
     if month == months[i]:
-        print("Thank you, ", month, " is month number ", i, ".", sep = "")
+        print(f"Thank you, {month} is month number {i}.")
         sys.exit(0)
 
 #Arrive here if we did not find the word we were looking for.
-print("Bad month \"", month, "\".", sep = "")
+print(f"Bad month \"{month}\".")
 sys.exit(1)
