@@ -16,15 +16,15 @@ filename = "/Users/myname/Desktop/escalus.gif"
 try:
     binaryFile = open(filename, "rb")          #read binary
 except FileNotFoundError:
-    print("Sorry, could not find file \"", filename, "\".", sep = "")
+    print(f"Sorry, could not find file \" {filename}\".")
     sys.exit(1)
 except PermissionError:
-    print("Sorry, no permission to open file \"", filename, "\".", sep = "")
+    print(f"Sorry, no permission to open file \"{filename}\".")
     sys.exit(1)
 
 sequenceOfBytes = binaryFile.read()            #not string of characters
 binaryFile.close()
-print("len(sequenceOfBytes) =", len(sequenceOfBytes))
+print(f"len(sequenceOfBytes) = {len(sequenceOfBytes)}")
 
 root = tkinter.Tk()
 
