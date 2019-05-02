@@ -13,7 +13,7 @@ filename = "/Library/Frameworks/Python.framework/Versions/3.7/share/doc/python3.
 #filename = "C:\\Users\\Myname\\AppData\\Local\\Programs\\Python\\Python37-32\\Tools\\demo\\beer.py"
 
 try:
-    lines = open(filename)
+    lines = open(filename) #lines is something you can loop through with a for loop
 except FileNotFoundError:
     print(f"Sorry, could not find file \"{filename}\".")
     sys.exit(1)
