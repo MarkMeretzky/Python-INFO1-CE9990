@@ -24,7 +24,7 @@ except PermissionError:
 
 sequenceOfBytes = binaryFile.read()            #not string of characters
 binaryFile.close()
-print(f"len(sequenceOfBytes) = {len(sequenceOfBytes)}")
+print(f"len(sequenceOfBytes) = {len(sequenceOfBytes):,}")
 
 root = tkinter.Tk()
 
