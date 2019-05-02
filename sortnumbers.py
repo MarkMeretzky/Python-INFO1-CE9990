@@ -21,6 +21,6 @@ years = [
 years.sort()
 
 for year in years:
-    print("{:4}".format(year))
+    print(f"{year:4}")
 
 sys.exit(0)
