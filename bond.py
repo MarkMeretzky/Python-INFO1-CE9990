@@ -12,7 +12,7 @@ if sys.platform.startswith("darwin"):    #macOS Sierra 10.12.5
 elif sys.platform.startswith("win32"):   #Microsoft Windows 7 Home Premium
     filename = "C:\\Users\\Myname\\Desktop\\bond.txt"
 else:
-    print("Unknown platform", sys.platform)
+    print(f"Unknown platform {sys.platform}")
     sys.exit(1)
 
 try:
