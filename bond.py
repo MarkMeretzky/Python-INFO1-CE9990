@@ -18,7 +18,7 @@ else:
 try:
     infile = open(filename)
 except FileNotFoundError:
-    printf(f"Sorry, could not find file \"{filename}\".")
+    print(f"Sorry, could not find file \"{filename}\".")
     sys.exit(1)
 except PermissionError:
     print(f"Sorry, no permission to open file \"{filename}\".")
