@@ -18,10 +18,10 @@ else:
 try:
     infile = open(filename)
 except FileNotFoundError:
-    print("Sorry, could not find file \"", filename, "\".", sep = "")
+    printf(f"Sorry, could not find file \"{filename}\".")
     sys.exit(1)
 except PermissionError:
-    print("Sorry, no permission to open file \"", filename, "\".", sep = "")
+    print(f"Sorry, no permission to open file \"{filename}\".")
     sys.exit(1)
 
 lines = infile.readlines() #lines is a list of strings
