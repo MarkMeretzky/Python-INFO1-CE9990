@@ -31,6 +31,9 @@ fortunes = [
 #allFortunes = fortunes.copy()
 
 #A third way to make a copy of a list.
+#allFortunes = fortunes[:]
+
+#A fourth way to make a copy of a list.
 allFortunes = [fortune for fortune in fortunes]
 for fortune in allFortunes:
     print(fortune)
