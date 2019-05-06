@@ -44,6 +44,6 @@ else :
 #Move d foreward one day.  delta is the distance: exactly one day.
 delta = datetime.timedelta(days = 1)
 d += delta   #means d = d + delta
-print(f"{d is now {d}.")
+print(f"d is now {d}.")
 
 sys.exit(0)
