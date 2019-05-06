@@ -12,10 +12,10 @@ filename = "DOHMH_New_York_City_Restaurant_Inspection_Results.csv"
 try:
     csvfile = open(filename, encoding = "utf-8", newline = "")
 except FileNotFoundError:
-    print("Sorry, could not find file \"", filename, "\".", sep = "")
+    print(f"Sorry, could not find file \"{filename}\".")
     sys.exit(1)
 except PermissionError:
-    print("Sorry, no permission to open file \"", filename, "\".", sep = "")
+    print(f"Sorry, no permission to open file \"{filename}\".")
     sys.exit(1)
 
 lines = csv.reader(csvfile)
