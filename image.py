@@ -32,7 +32,7 @@ try:
     #The following statement cannot come before the tkinter.Tk().
     photoImage = tkinter.PhotoImage(data = sequenceOfBytes)
 except tkinter.TclError as error:
-    print(error)   #"couldn't recognize image data" when image is jpg or png.
+    print(error)   #"couldn't recognize image data" when image is jpg.
     sys.exit(1)
 
 root.geometry("720x480")
