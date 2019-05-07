@@ -14,15 +14,15 @@ filename = "/Users/myname/Desktop/escalus.gif"
 #filename = "C:\\Users\\Myname\\Desktop\\escalus.gif"
 
 try:
-    binaryFile = open(filename, "rb")          #read binary
+    binaryFile = open(filename, "rb")   #read binary
 except FileNotFoundError:
-    print(f"Sorry, could not find file \" {filename}\".")
+    print(f"Sorry, could not find file \"{filename}\".")
     sys.exit(1)
 except PermissionError:
     print(f"Sorry, no permission to open file \"{filename}\".")
     sys.exit(1)
 
-sequenceOfBytes = binaryFile.read()            #not string of characters
+sequenceOfBytes = binaryFile.read()     #not string of characters
 binaryFile.close()
 print(f"len(sequenceOfBytes) = {len(sequenceOfBytes):,}")
 
