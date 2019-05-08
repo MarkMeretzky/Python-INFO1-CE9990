@@ -25,6 +25,6 @@ n = len(animals)
 i = 0
 while i < n:
     print(animals[i])
-    i += 1
+    i += 1   #mean i = i + 1
 
 sys.exit(0)
