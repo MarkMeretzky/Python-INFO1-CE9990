@@ -33,7 +33,7 @@ barHeight = enrollment * studentHeight
 #Dimensions of root.
 width = gap + n * (barWidth + gap)
 height = barHeight + 2 * gap
-root.geometry(f"{width}x{height})
+root.geometry(f"{width}x{height}")
 
 background = "yellow"
 canvas = tkinter.Canvas(root, background = background, highlightthickness = 0)
