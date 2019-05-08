@@ -30,10 +30,10 @@ gap = int(barWidth / 2)           #between bars
 studentHeight = int(barWidth / 2) #height of one student
 barHeight = enrollment * studentHeight
 
-#Dimenensions of root.
+#Dimensions of root.
 width = gap + n * (barWidth + gap)
 height = barHeight + 2 * gap
-root.geometry(str(width) + "x" + str(height))
+root.geometry(f"{width}x{height})
 
 background = "yellow"
 canvas = tkinter.Canvas(root, background = background, highlightthickness = 0)
@@ -47,7 +47,7 @@ for i, a in enumerate(attendance):
     right = left + barWidth
 
     average = (left + right) / 2
-    canvas.create_text(average, bottom, text = str(i + 1), anchor = tkinter.N)
+    canvas.create_text(average, bottom, text = f"{i + 1}", anchor = tkinter.N)
 
     if a > 0:
         #distance from top edge of root to top edge of this bar
