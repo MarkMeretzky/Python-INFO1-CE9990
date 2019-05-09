@@ -36,7 +36,7 @@ except tkinter.TclError as error:
     sys.exit(1)
 
 root.geometry("720x480")
-root.title("Price Escalus")
+root.title("Prince Escalus")
 
 label = tkinter.Label(root, image = photoImage)
 label.pack()
