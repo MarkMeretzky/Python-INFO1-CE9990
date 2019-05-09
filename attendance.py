@@ -25,9 +25,9 @@ attendance = [
 n = len(attendance) #number of lectures
 enrollment = 20     #number of students
 
-barWidth = 30                     #in pixels
-gap = int(barWidth / 2)           #between bars
-studentHeight = int(barWidth / 2) #height of one student
+barWidth = 30                 #in pixels
+gap = barWidth // 2           #between bars
+studentHeight = barWidth // 2 #height of one student
 barHeight = enrollment * studentHeight
 
 #Dimensions of root.
@@ -46,7 +46,7 @@ for i, a in enumerate(attendance):
     #distance from left edge of root to right edge of this bar
     right = left + barWidth
 
-    average = (left + right) / 2
+    average = (left + right) // 2
     canvas.create_text(average, bottom, text = f"{i + 1}", anchor = tkinter.N)
 
     if a > 0:
