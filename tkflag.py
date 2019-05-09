@@ -13,8 +13,8 @@ root = tkinter.Tk()
 root.title("United States Flag")
 
 #dimensions of entire flag, in pixels
-height = 13 * stripeHeight  #13 stripes
-width = int(height * 19/10) #Wikipedia says aspect ratio of flag is 10:19
+height = 13 * stripeHeight #13 stripes
+width = height * 19 // 10  #Wikipedia says aspect ratio of flag is 10:19
 root.geometry(f"{width}x{height}")
 
 #highlightthickness = 0 allows the canvas to occupy the entire root.
