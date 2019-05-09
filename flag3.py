@@ -13,8 +13,8 @@ root = tkinter.Tk()
 root.title("United States Flag")
 
 #dimensions of entire flag, in pixels
-height = 13 * stripeHeight  #13 stripes
-width = int(height * 19/10) #Wikipedia says aspect ratio of flag is 10:19
+height = 13 * stripeHeight #13 stripes
+width = height * 19 // 10  #Wikipedia says aspect ratio of flag is 10:19
 root.geometry(f"{width}x{height}")
 canvas = tkinter.Canvas(root, highlightthickness = 0, background = "white")
 
@@ -23,13 +23,13 @@ for i in range(7):
     canvas.create_rectangle(0, 2 * i * stripeHeight,
         width, (2 * i + 1) * stripeHeight, width = 0, fill = "red")
 
-canvas.create_rectangle(0, 0, width * 2/5, 7 * stripeHeight,
+canvas.create_rectangle(0, 0, width * 2 // 5, 7 * stripeHeight,
     width = 0, fill = "blue")
 
 #The star is inscribed in this imaginary circle.
 xCenter = width / 5
 yCenter = 3.5 * stripeHeight
-radius = yCenter * 2/3
+radius = yCenter * 2 / 3
 
 start = math.pi / 2      #First point of star points straight up.
 delta = .4 * 2 * math.pi #Successive points are 144 degrees apart.
