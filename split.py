@@ -15,7 +15,7 @@ that among these are Life, Liberty, and the pursuit of Happiness."""
 print(preamble)                  #preamble is one big string.  It is not a list.
 print()
 
-phrases = preamble.split(",\n")   #phrases is a list of 6 strings
+phrases = preamble.split(",\n")   #phrases is a list of 4 strings
 for phrase in phrases:
     print(phrase)
 
