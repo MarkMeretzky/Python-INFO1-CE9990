@@ -119,6 +119,7 @@ while True:
     except EOFError:
         sys.exit(0)
 
-    print(random.choice(subjects))
-    print(random.choice(predicates))
-    print(random.choice(modifiers), ".", sep = "")
+    print(f"""\
+    {random.choice(subjects)}
+    {random.choice(predicates)}
+    {random.choice(modifiers)}.""")
