@@ -120,7 +120,6 @@ while True:
         sys.exit(0)
 
     print(f"""\
-    {random.choice(subjects)}
-    {random.choice(predicates)}
-    {random.choice(modifiers)}.""")
-
+{random.choice(subjects)}
+{random.choice(predicates)}
+{random.choice(modifiers)}.""")
