@@ -123,3 +123,4 @@ while True:
 {random.choice(subjects)}
 {random.choice(predicates)}
 {random.choice(modifiers)}.""")
+
