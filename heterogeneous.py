@@ -14,7 +14,6 @@ import sys
 
 movie = ["Dr. No", 1962, 59_500_000.00, ["Sean Connery", "Ursula Andress", "Joseph Wiseman", "Jack Lord"]]
 
-
 print(f"""\
 Name: {movie[0]}                          
 Year: {movie[1]}                         
