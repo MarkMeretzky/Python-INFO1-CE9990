@@ -26,6 +26,6 @@ stars = movie[3]
 for star in stars[:-1]: #all but the last star
     print(f"{star}, ", end = "")
   
-print(stars[:-1])       #the last star
+print(stars[-1])        #the last star
 
 sys.exit(0)
