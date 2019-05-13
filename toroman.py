@@ -18,7 +18,7 @@ def getInt(prompt):
     try:
         i = int(s)
     except ValueError:
-        print("Sorry, \"", s, "\" is not an integer.", sep = "")
+        print(f"Sorry, \"{s}\" is not an integer.")
         sys.exit(1)
 
     return i
@@ -51,8 +51,8 @@ while True:
         n = getInt("Please type an integer in the range 1 to 4999 inclusive:")
         if 1 <= n and n <= 4999:
             break
-        print("Sorry,", n, "is out of range.")
+        printf(f"Sorry, {n} is out of range.")
 
     romanNumeral = toRoman(n)
-    print(n, "=", romanNumeral)
+    print(f"{n} = {romanNumeral})
     print()
