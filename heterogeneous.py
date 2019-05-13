@@ -19,7 +19,7 @@ print("""\
 Name: {movie[0]}                          
 Year: {movie[1]}                         
 Box office: ${movie[2]:,.2f} 
-Starring:""",
+Starring: """,
     end = "")                     
 
 stars = movie[3]
