@@ -54,5 +54,5 @@ while True:
         printf(f"Sorry, {n} is out of range.")
 
     romanNumeral = toRoman(n)
-    print(f"{n} = {romanNumeral})
+    print(f"{n} = {romanNumeral}")
     print()
