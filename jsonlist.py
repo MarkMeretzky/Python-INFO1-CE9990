@@ -9,9 +9,10 @@ import sys
 import json                #JavaScript Object Notation 
 
 s = "[10, 20, 30, 40,50]"  #deliberately omitted a space
-print("type(s) =", type(s))
-print("s =", s)
-print()
+print(f"""\
+type(s) = {type(s)}
+s = {s}
+""")
 
 #Convert the string of characters into a list of numbers.
 try:
@@ -22,7 +23,7 @@ except json.JSONDecodeError as jSONDecodeError:
 
 #Now that we have a list of numbers,
 #we can loop through the numbers with a for loop.
-print("type(listOfNumbers) =", type(listOfNumbers))
+print(f"type(listOfNumbers) = {type(listOfNumbers)}")
 for n in listOfNumbers:
     print(n)
 print()
