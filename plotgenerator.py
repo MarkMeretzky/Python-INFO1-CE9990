@@ -34,7 +34,7 @@ subjects = [
     "A group of orthodox rabbis",
     "A burned-out hippie",
     "A Catholic priest",
-    "A hooker with a heard of gold",
+    "A hooker with a heart of gold",
     "A grumpy midget",
     "A group of cantankerous senior citizens",
     "Jesus",
