@@ -110,7 +110,7 @@ while True:
     try:
         buildingNumber = int(s)
     except ValueError:
-        print("Sorry,", s, "is not an integer.")
+        print(f"Sorry, {s} is not an integer.")
         print()
         continue
 
@@ -121,7 +121,7 @@ while True:
 
     print()
     for i, avenue in enumerate(avenues):
-        print("{:2} {}".format(i, avenue[0]))
+        print(f"{i:2} {avenue[0]}")
     print()
 
     try:
@@ -132,24 +132,24 @@ while True:
     try:
         avenueNumber = int(s)
     except ValueError:
-        print("Sorry,", s, "is not an integer.")
+        print(f"Sorry, {s} is not an integer.")
         print()
         continue
 
     if avenueNumber < 0 or avenueNumber >= n:
-        print("Sorry,", avenueNumber, "is out of range.")
+        print(f"Sorry, {avenueNumber} is out of range.")
         print()
         continue
 
     street = findStreet(buildingNumber, avenueNumber)
-    s = str(buildingNumber) + " " + avenues[avenueNumber][0] + " is "
+    s = f"{buildingNumber} {avenues[avenueNumber][0]} is "
 
     if street == None:
         s += "not found"
     elif street < 0:
         s += "below 8th Street"  #special case: only on Broadway
     else:
-        s += "at " + ordinal(street) + " Street"
+        s += f"at {ordinal(street)} Street"
 
-    print(s + ".")
+    print(f"{s}.")
     print()
