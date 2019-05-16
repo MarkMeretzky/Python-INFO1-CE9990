@@ -28,10 +28,9 @@ while True:
     try:
         number = numbers[word]   #number is an int
     except KeyError:
-        print("Sorry, \"", word, "\" is not a number in the range one to ten.",
-            sep = "")
+        print(f'Sorry, "{word}" is not a number in the range one to ten.')
         print()
         continue   #Go back up to the word "while".
     
-    print("The word ", word, " is the number ", number, ".", sep = "")
+    print(f"The word {word} is the number {number}.")
     print()
