@@ -132,7 +132,7 @@ def buttonPress():   #Called when the button is pressed.
         return
 
     street = findStreet(buildingNumber, avenueNumber)
-    s = f"{buildingNumber)} {avenueName.get()} is "
+    s = f"{buildingNumber} {avenueName.get()} is "
 
     if street == None:
         s += "not found"
