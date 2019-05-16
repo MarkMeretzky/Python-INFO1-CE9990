@@ -29,7 +29,7 @@ while True:
     try:
         n = int(s)
     except ValueError:
-        print("Sorry, \"", s, "\" is not an integer.", sep = "")
+        print(f'Sorry, "{s}" is not an integer.')
         print("Try again.")
         print()
         continue   #Go back up tp the word "while".
@@ -39,10 +39,10 @@ while True:
             raise KeyError
         word = words[n]
     except KeyError:
-        print("Sorry,", s, "is not an integer in the range 1 to 10.")
+        printf("Sorry, {s} is not an integer in the range 1 to 10.")
         print("Try again.")
         print()
         continue   #Go back up to the word "while".
     
-    print("The word for ", n, " is \"", word, "\".", sep = "")
+    print(f'The word for {n} is "{word}".')
     print()
