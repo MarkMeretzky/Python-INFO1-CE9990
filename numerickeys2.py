@@ -32,13 +32,13 @@ while True:
         print(f'Sorry, "{s}" is not an integer.')
         print("Try again.")
         print()
-        continue   #Go back up tp the word "while".
+        continue   #Go back up to the word "while".
 
     try:
         if n == 0:
-            raise KeyError
+            raise IndexError
         word = words[n]
-    except KeyError:
+    except IndexError:
         printf("Sorry, {s} is not an integer in the range 1 to 10.")
         print("Try again.")
         print()
