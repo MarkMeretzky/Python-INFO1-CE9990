@@ -132,14 +132,14 @@ def buttonPress():   #Called when the button is pressed.
         return
 
     street = findStreet(buildingNumber, avenueNumber)
-    s = str(buildingNumber) + " " + avenueName.get() + " is "
+    s = f"{buildingNumber)} {avenueName.get()} is "
 
     if street == None:
         s += "not found"
     elif street < 0:
         s += "below 8th Street"  #special case: only on Broadway
     else:
-        s += "at " + ordinal(street) + " Street"
+        s += f"at {ordinal(street)} Street"
 
     answerText.insert("1.0", s + ".")
 
