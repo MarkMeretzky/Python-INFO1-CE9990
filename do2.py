@@ -25,9 +25,9 @@ while True:
     try:
         definition = notes[note]
     except KeyError:
-        print("Sorry, \"", note, "\" is not a note.", sep = "")
+        print(f'Sorry, "{note}" is not a note.')
         print()
         continue   #Go back up to the word "while".
     
-    print(note.capitalize(), ", a ", definition, ".", sep = "")
+    print(f"{note.capitalize()}, a {definition}.")
     print()
