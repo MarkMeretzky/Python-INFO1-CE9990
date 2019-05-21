@@ -8,10 +8,10 @@ import sys
 attributes = {
     "name":           "Mark",            #string
     "zipcode":        10705,             #int
-    "age":            61.9,              #float
+    "age":            63.75,             #float
     "citizenship":    True,              #bool
     "leaning":        "flaming liberal", #string
-    "favorite years": [1968, 2001, 2017] #list
+    "favorite years": [1968, 2001, 2019] #list
 }
 
 while True:
