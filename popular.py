@@ -27,7 +27,7 @@ for line in lines:
     filename = fields[6]
     if "/~meretzkm/python/" in filename \
         and (fields[8] == "200" or fields[8] == "304"):
-        if not filename in count:
+        if filename not in count:
             count[filename] = 0
         count[filename] += 1
 
