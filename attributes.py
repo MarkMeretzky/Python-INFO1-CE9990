@@ -16,7 +16,7 @@ attributes = {
 
 while True:
     for key in sorted(attributes.keys()):
-        print("\t", key, sep = "")   #Indent with one tab character.
+        print(f"\t{key}")   #Indent with one tab character.
 
     print()
     
@@ -26,8 +26,8 @@ while True:
         sys.exit(0)
 
     try:
-        print(key, " is ", attributes[key], ".", sep = "")
+        print(f"{key} is {attributes[key]}.")
     except KeyError:
-        print("Sorry, \"", key, "\" is not an attribute.", sep = "")
+        print(f'Sorry, "{key}" is not an attribute.')
 
     print()
