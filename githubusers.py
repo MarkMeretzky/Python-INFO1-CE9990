@@ -53,7 +53,7 @@ len(dictionary["items"]) = {len(items)}
 
 items.sort(key = lambda item: item["html_url"])   #alphabetical order
 
-for i, item in enumerate(items): #i is an int, items is a dictionary
+for i, item in enumerate(items, start = 1): #i is an int, items is a dictionary
     print(i, item["html_url"])
     
 sys.exit(0)
