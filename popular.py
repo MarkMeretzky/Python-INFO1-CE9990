@@ -8,15 +8,15 @@ and the number of times it was downloaded.
 import sys
 
 #Fedora Linux
-filename = "/var/log/httpd/access_log-20170612"
+filename = "/var/log/httpd/access_log-20190325"
 
 try:
     lines = open(filename)
 except FileNotFoundError:
-    print("Sorry, could not find file \"", filename, "\".", sep = "")
+    print(f'Sorry, could not find file "{filename}".')
     sys.exit(1)
 except PermissionError:
-    print("Sorry, no permission to open file \"", filename, "\".", sep = "")
+    print(f'Sorry, no permission to open file "{filename}".')
     sys.exit(1)
 
 #How many times does each Python file appear in the access_log?
