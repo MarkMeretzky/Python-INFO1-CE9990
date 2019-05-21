@@ -10,14 +10,14 @@ import sys
 import json
 import urllib.request
 
-url = "https://api.github.com/search/repositories" \
-    "?utf8=%E2%9C%93" \
-    "&q=Python-INFO1-CE9990" \
-    "&type=Repositories" \
-    "&s=updated" \
-    "&o=desc"
+url = (
+    "https://api.github.com/search/users"
+    "?utf8=%E2%9C%93"
+    "&q=WS19PB02-"
+    "&type=organizations"
+)
 
-headers = {
+headers = {    #a dictionary
     "Accept": "application/vnd.github.preview+json"
 }
 request = urllib.request.Request(url, headers = headers)
@@ -44,9 +44,16 @@ except json.JSONDecodeError as jSONDecodeError:
     sys.exit(1)
 
 items = dictionary["items"]       #items is a list
-items.sort(key = lambda item: item["pushed_at"], reverse = True)
+print(f"""\
+dictionary["incomplete_results"] = {dictionary["incomplete_results"]}
+dictionary["total_count"] = {dictionary["total_count"]}
+type(dictionary["items"]) = {type(items)}
+len(dictionary["items"]) = {len(items)}
+""")
 
-for item in items:                #item is a dictionary
-    print(item["owner"]["login"]) #item["owner"] is a dictionary
+items.sort(key = lambda item: item["html_url"])   #alphabetical order
+
+for i, item in enumerate(items): #i is an int, items is a dictionary
+    print(item["html_url"])
     
 sys.exit(0)
