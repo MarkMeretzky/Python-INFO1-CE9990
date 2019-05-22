@@ -58,7 +58,7 @@ listOfPresidents = [
 dictionaryOfPresidents = {}   #Start with an empty dictionary.
 
 for president in listOfPresidents[1:]:             #Skip the dummy item.
-    if not president in dictionaryOfPresidents:
+    if president not in dictionaryOfPresidents:
         dictionaryOfPresidents[president] = None   #Seeing him for the first time.
         print(president)
 
