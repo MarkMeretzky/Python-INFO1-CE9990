@@ -8,11 +8,13 @@ import sys
 import urllib.request
 import lxml.etree
 
-url = "http://api.openweathermap.org/data/2.5/weather" \
-    "?q=10036,US" \
-    "&units=imperial" \
-    "&mode=xml" \
+url = (
+    "http://api.openweathermap.org/data/2.5/weather"
+    "?q=10004,US"
+    "&units=imperial"
+    "&mode=xml"
     "&APPID=532d313d6a9ec4ea93eb89696983e369"
+)
 
 try:
     infile = urllib.request.urlopen(url)
@@ -67,5 +69,5 @@ if unit == None:
     print("Couldn't find unit of temperature.")
     sys.exit(1)
 
-print("The temperature is {}° {}.".format(value, unit))
+print(f"The temperature is {value}° {unit}.")
 sys.exit(0)
