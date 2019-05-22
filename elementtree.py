@@ -10,11 +10,13 @@ import urllib.request
 import xml.etree.ElementTree
 import xml.dom.minidom
 
-url = "http://api.openweathermap.org/data/2.5/weather" \
-    "?q=10036,US" \
-    "&units=imperial" \
-    "&mode=xml" \
+url = (
+    "http://api.openweathermap.org/data/2.5/weather"
+    "?q=10004,US"
+    "&units=imperial"
+    "&mode=xml"
     "&APPID=532d313d6a9ec4ea93eb89696983e369"
+)
 
 try:
     infile = urllib.request.urlopen(url)
@@ -28,7 +30,7 @@ infile.close()
 try:
     s = sequenceOfBytes.decode("utf-8") #s is a string.
 except UnicodeError as unicodeError:
-    print(unicodeError)
+    print("UnicodeError", unicodeError)
     sys.exit(1)
 
 print(s)
@@ -39,7 +41,7 @@ print()
 try:
     document = xml.dom.minidom.parseString(s)
 except xml.parsers.expat.ExpatError as error:
-    print(error)
+    print("xml.parsers.expat.ExpatError", error)
     sys.exit(1)
 
 prettyS = document.toprettyxml(indent = "\t")   #prettyS is a string.
@@ -51,7 +53,7 @@ print()
 try:
     root = xml.etree.ElementTree.fromstring(s)
 except xml.etree.ElementTree.ParseError as error:
-    print(error)
+    print("xml.etree.ElementTree.ParseError", error)
     sys.exit(1)
 
 temperature = root.find("temperature")
@@ -69,5 +71,5 @@ if unit == None:
     print("Couldn't find unit of temperature.")
     sys.exit(1)
 
-print("The temperature is {}° {}.".format(value, unit))
+print(f"The temperature is {value}° {unit}.")
 sys.exit(0)
