@@ -28,7 +28,7 @@ infile.close()
 try:
     s = sequenceOfBytes.decode("utf-8") #s is a string.
 except UnicodeError as unicodeError:
-    print(unicodeError)
+    print("UnicodeError", unicodeError)
     sys.exit(1)
 
 print(s)
@@ -38,7 +38,7 @@ print()
 try:
     root = lxml.etree.fromstring(sequenceOfBytes)
 except lxml.etree.XMLSyntaxError as error:
-    print(error)
+    print("lxml.etree.XMLSyntaxError", error)
     sys.exit(1)
 
 prettySequenceOfBytes = lxml.etree.tostring(root, pretty_print = True)
@@ -46,7 +46,7 @@ prettySequenceOfBytes = lxml.etree.tostring(root, pretty_print = True)
 try:
     prettyS = prettySequenceOfBytes.decode("utf-8")   #prettyS is a string.
 except UnicodeError as unicodeError:
-    print(unicodeError)
+    print("UnicodeError", unicodeError)
     sys.exit(1)
     
 print(prettyS)
