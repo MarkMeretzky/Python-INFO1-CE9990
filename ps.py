@@ -12,7 +12,7 @@ lines = infile.readlines()           #lines is a list of lines.
 status = infile.close()
 
 if status != None:                   #status is supposed to be None.
-    print("\"ps -A -o comm\" produced exit status", status)
+    print(f'"ps -A -o comm" produced exit status {status}.')
     sys.exit(1)
 
 lines = set(lines[1:])                          #Remove 1st item & extra copies.
@@ -21,6 +21,6 @@ lines = [line.split("/")[-1] for line in lines] #Remove all but last component.
 lines = sorted(lines)
 
 for i, line in enumerate(lines, start = 1):
-    print("{:3} {}".format(i, line))
+    print(f"{i:3} {line}")
 
 sys.exit(0)
