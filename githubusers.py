@@ -34,7 +34,7 @@ infile.close()
 try:
     s = sequenceOfBytes.decode("utf-8")
 except UnicodeError as unicodeError:
-    print(unicodeError)
+    print("UnicodeError", unicodeError)
     sys.exit(1)
 
 try:
