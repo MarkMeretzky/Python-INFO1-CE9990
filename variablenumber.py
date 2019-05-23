@@ -18,5 +18,6 @@ myPrint(10, 20)                  #2 arguments
 myPrint("Moe", "Larry", "Curly") #3 arguments
 
 myList = [10, 20, 30, 40]
-myPrint(*myList)                 #1 argument, but that argument is a list
+myPrint(myList)                 #1 argument, but that argument is a list
+myPrint(*myList)                #4 arguments
 sys.exit(0)
