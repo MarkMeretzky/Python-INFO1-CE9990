@@ -12,7 +12,7 @@ count = 0
 def counter():
     global count
     count += 1
-    print("This is call number ", count, ".", sep = "")
+    print(f"This is call number {count}.")
 
 counter()
 counter()
