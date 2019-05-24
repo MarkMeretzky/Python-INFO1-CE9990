@@ -8,6 +8,7 @@ import sys
 
 def myPrint(*args):
     assert isinstance(args, tuple)
+    print(f"myPrint received {len(args)} argument(s).")
     for arg in args:
         print(arg)
     print(80 * "-")
