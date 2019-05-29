@@ -10,34 +10,28 @@ def draw(rowsOfBoxes, columnsOfBoxes, rowsOfSpaces, columnsOfSpaces):
     dimensions.  The right and bottom edges are left ragged.
     """
     if not isinstance(rowsOfBoxes, int):
-        raise TypeError("rowsOfBoxes must be int, not "
-            + str(type(rowsOfBoxes)))
+        raise TypeError(f"rowsOfBoxes must be int, not {type(rowsOfBoxes)}")
 
     if rowsOfBoxes < 1:
-        raise ValueError("rowsOfBoxes must be >= 1, not " + str(rowsOfBoxes))
+        raise ValueError(f"rowsOfBoxes must be >= 1, not {rowsOfBoxes}")
 
     if not isinstance(columnsOfBoxes, int):
-        raise TypeError("columnsOfBoxes must be int, not "
-            + str(type(columnsOfBoxes)))
+        raise TypeError(f"columnsOfBoxes must be int, not {type(columnsOfBoxes)}")
 
     if columnsOfBoxes < 1:
-        raise ValueError("columnsOfBoxes must be >= 1, not "
-            + str(columnsOfBoxes))
+        raise ValueError(f"columnsOfBoxes must be >= 1, not {columnsOfBoxes}")
 
     if not isinstance(rowsOfSpaces, int):
-        raise TypeError("rowsOfSpaces must be int, not "
-            + str(type(rowsOfSpaces)))
+        raise TypeError(f"rowsOfSpaces must be int, not {type(rowsOfSpaces)}")
 
     if rowsOfSpaces < 1:
-        raise ValueError("rowsOfSpaces must be >= 1, not " + str(rowsOfSpaces))
+        raise ValueError(f"rowsOfSpaces must be >= 1, not {rowsOfSpaces}")
 
     if not isinstance(columnsOfSpaces, int):
-        raise TypeError("columnsOfSpaces must be int, not "
-            + str(type(columnsOfSpaces)))
+        raise TypeError(f"columnsOfSpaces must be int, not {type(columnsOfSpaces)}")
 
     if columnsOfSpaces < 1:
-        raise ValueError("columnsOfSpaces must be >= 1, not "
-            + str(columnsOfSpaces))
+        raise ValueError(f"columnsOfSpaces must be >= 1, not {columnsOfSpaces}")
 
     top = "+" + columnsOfSpaces * "-"
     mid = "|" + columnsOfSpaces * " "
