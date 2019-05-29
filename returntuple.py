@@ -12,7 +12,7 @@ def stats(myList):
     return (min(myList), max(myList), sum(myList) / len(myList)) #outer parens unnecessary
 
 myList = [10, 20, 50, 30, 20]
-(minimum, maximum, average) = stats(myList) #parens around variables unnecessary
+(minimum, maximum, average) = stats(myList) #parens around the three variables are unnecessary
 
 print("minimum =", minimum)
 print("maximum =", maximum)
