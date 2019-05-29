@@ -17,8 +17,8 @@ class TestGraphpaper(unittest.TestCase):
         for i in range(n):
             for j in range(len(badArgs)):
                 with self.assertRaises(TypeError):
-                    args = [1 for k in range(n)] #a list of n copies of 1
-                    args[i] = badArgs[j]         #Introduce a bad argument.
+                    args = n * [1]         #a list of n copies of 1
+                    args[i] = badArgs[j]   #Introduce a bad argument.
                     graphpaper.draw(*args)
 
     def test_range(self):
@@ -26,8 +26,8 @@ class TestGraphpaper(unittest.TestCase):
         n = 4   #number of arguments of graphpaper.draw
         for i in range(n):
             with self.assertRaises(ValueError):
-                args = [1 for j in range(n)] #a list of n copies of 1
-                args[i] = 0                  #Introduce a bad argument.
+                args = n * [1]   #a list of n copies of 1
+                args[i] = 0      #Introduce a bad argument.
                 graphpaper.draw(*args)
 
     def test_return(self):
