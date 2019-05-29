@@ -102,7 +102,7 @@ print()
 
 print(f"{d} is day number {d.dayOfYear()} of the year {d.getYear()}.")
 d.nextDay()                    #Call the instance method in line 62.
-print(f"{d}is the next day.")
+print(f"{d} is the next day.")
 d.nextDays(7)                  #Call the instance method in line 74.
-print(f"{d}is a week after that.")
+print(f"{d} is a week after that.")
 sys.exit(0)
