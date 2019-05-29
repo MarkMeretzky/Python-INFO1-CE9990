@@ -31,17 +31,15 @@ class Date(object):
 
     def __init__(self, month, day, year):
         if not isinstance(year, int):
-            raise TypeError("year must be int, not " + str(type(year)))
+            raise TypeError(f"year must be int, not {type(year)}")
         if not isinstance(month, int):
-            raise TypeError("month must be int, not " + str(type(month)))
+            raise TypeError(f"month must be int, not {type(month)}")
         if month < 1 or month > Date.monthsInYear():
-            raise ValueError("month must be in range 1 to " +
-                str(Date.monthsInYear()) + " inclusive, not " + str(month))
+            raise ValueError(f"month must be in range 1 to {Date.monthsInYear()} inclusive, not {month}")
         if not isinstance(day, int):
-            raise TypeError("day must be int, not " + str(type(day)))
+            raise TypeError(f"day must be int, not {type(day)}")
         if day < 1 or day > Date.lengths[month]:
-            raise ValueError("day must be in range 1 to " +
-                str(Date.lengths[month]) + " inclusive, not " + str(day))
+            raise ValueError(f"day must be in range 1 to {Date.lengths[month]} inclusive, not {day}")
         self.year = year
         self.month = month
         self.day = day
@@ -62,7 +60,7 @@ class Date(object):
 
     def __str__(self):
         "Return a string that looks like the contents of myself."
-        return "{:02}/{:02}/{:04}".format(self.month, self.day, self.year)
+        return f"{self.month:02}/{self.day:02}/{self.year:04}"
 
     def dayOfYear(self):
         "Return my day of the year: a number in the range 1 to 365 inclusive."
@@ -83,11 +81,11 @@ class Date(object):
     def nextDays(self, n):
         "Move myself n days into the future."
         if not isinstance(n, int):
-            raise TypeError("n must be int, not " + str(type(n)))
+            raise TypeError(f"n must be int, not {type(n)}")
         if n < 0:
-            raise ValueError("n must be nonnegative, not " + str(n))
+            raise ValueError(f"n must be nonnegative, not {n}")
         for i in range(n):
-            self.nextDay()     #Call the instance method in line 71.
+            self.nextDay()     #Call the instance method in line 69.
 
     def monthsInYear():
         "Return the number of months in a year.  This function is selfless."
@@ -102,5 +100,5 @@ if __name__ == "__main__":
     now = datetime.datetime.now()
     #Create a Date object holding today's date.
     d = Date(now.month, now.day, now.year)
-    print("Today is ", d, ".", sep = "")
+    print(f"Today is {d}.")
     sys.exit(0)
