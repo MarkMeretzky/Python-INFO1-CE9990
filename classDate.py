@@ -53,7 +53,7 @@ class Date(object):
 
     def __str__(self):
         "Return a string that looks like the contents of myself."
-        return "{:02}/{:02}/{:04}".format(self.month, self.day, self.year)
+        return f"{self.month:02}/{self.day:02}/{self.year:04}"
 
     def dayOfYear(self):
         "Return my day of the year: a number in the range 1 to 365 inclusive."
@@ -85,7 +85,7 @@ class Date(object):
 
 
 print("months in year =", Date.monthsInYear())
-d = Date(12, 31, 2017)         #Call the instance method in line 32.
+d = Date(12, 31, 2019)         #Call the instance method in line 32.
 print("type(d) =", type(d))
 print()
 
@@ -100,9 +100,9 @@ print("day =", d.getDay())     #Call the instance method in line 50.
 print("year =", d.getYear())   #Call the instance method in line 42.
 print()
 
-print("{} is day number {} of the year {}.".format(d, d.dayOfYear(), d.getYear()))
+print(f"{d} is day number {d.dayOfYear()} of the year {d.getYear()}.")
 d.nextDay()                    #Call the instance method in line 62.
-print(d, "is the next day.")
+print(f"{d}is the next day.")
 d.nextDays(7)                  #Call the instance method in line 74.
-print(d, "is a week after that.")
+print(f"{d}is a week after that.")
 sys.exit(0)
