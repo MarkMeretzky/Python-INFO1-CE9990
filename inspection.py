@@ -18,7 +18,7 @@ def inspections(camis):
     if camis <= 0:
         raise ValueError(f"camis must be positive, not {camis}.")
 
-    url = "https://data.cityofnewyork.us/api/views/xx67-kt59/rows.csv"
+    url = "https://data.cityofnewyork.us/api/views/43nn-pn8j/rows.csv"
 
     try:
         fileFromUrl = urllib.request.urlopen(url)
