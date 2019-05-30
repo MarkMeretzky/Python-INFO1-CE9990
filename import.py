@@ -5,10 +5,12 @@ Demonstrate that we can import a module we wrote.
 """
 
 import sys
+import os
 import date   #the date.py that we wrote
 
+print(f"The current directory is {os.getcwd()}")
 print("The import statement searches the following directories.")
-for i, dir in enumerate(sys.path):
+for i, dir in enumerate(sys.path, start = 1):
     print(i, dir)
 print()
 
