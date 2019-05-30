@@ -4,13 +4,13 @@ import.py
 Demonstrate that we can import a module we wrote.
 """
 
-print("The import statement is about to search the following directories.")
+import sys
+import date   #the date.py that we wrote
+
+print("The import statement searches the following directories.")
 for i, dir in enumerate(sys.path):
     print(i, dir)
 print()
-
-import sys
-import date   #the date.py that we wrote
 
 print("The following module has been loaded:")
 print(sys.modules["date"])   #sys.modules is a dictionary.
