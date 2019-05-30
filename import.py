@@ -1,12 +1,16 @@
 """
 import.py
-
 Demonstrate that we can import a module we wrote.
 """
 
 import sys
-import os
-import date   #the date.py that we wrote
+import os   #operating system
+
+try:
+    import date   #the date.py that we wrote
+except ModuleNotFoundError as error:
+    print(error)
+    sys.exit(1)
 
 print(f"The current directory is {os.getcwd()}")
 print("The import statement searches the following directories.")
