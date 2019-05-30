@@ -11,7 +11,15 @@ print("The following module has been loaded:")
 print(sys.modules["date"])   #sys.modules is a dictionary.
 print()
 
-d = date.Date(12, 31, 2019)
+try:
+    d = date.Date(12, 31, 2019)
+except TypeError as error:
+    print(error)
+    sys.exit(1)
+except ValueError as error:
+    print(error)
+    sys.exit(1)
+
 print("d =", d)
 print("type(d) =", type(d))
 
