@@ -13,7 +13,7 @@ def range(startingDate):
     if not isinstance(startingDate, datetime.date) \
         and not isinstance(startingDate, datetime.datetime):
         raise TypeError("startingDate must be datetime.date or "
-            + "datetime.datetime, not " + str(type(startingDate)))
+            + f"datetime.datetime, not {type(startingDate)}")
 
     for i in builtins.range(8):
         yield startingDate + datetime.timedelta(days = i)
