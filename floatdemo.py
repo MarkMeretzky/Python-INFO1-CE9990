@@ -5,7 +5,7 @@ Demonstrate the generator float.range.
 """
 
 import sys
-import float   #This is the float.py we wrote.
+import float   #the module float.py that we wrote
 
 #The built-in range: print the integers from 0 to 10 inclusive.
 for i in range(10 + 1):
