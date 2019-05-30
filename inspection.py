@@ -14,12 +14,11 @@ import datetime
 def inspections(camis):
     "Yield the inspections of the restaurant with the given CAMIS."
     if not isinstance(camis, int):
-        raise TypeError("camis must be int, not " + str(type) + ".")
+        raise TypeError(f"camis must be int, not {type}.")
     if camis <= 0:
-        raise ValueError("camis must be positive, not " + str(camis) + ".")
+        raise ValueError(f"camis must be positive, not {camis}.")
 
-    url = "https://data.cityofnewyork.us/api/views/xx67-kt59/rows.csv" \
-        "?accessType=DOWNLOAD"
+    url = "https://data.cityofnewyork.us/api/views/xx67-kt59/rows.csv"
 
     try:
         fileFromUrl = urllib.request.urlopen(url)
