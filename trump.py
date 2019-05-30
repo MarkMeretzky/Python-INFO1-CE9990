@@ -1,7 +1,7 @@
 """
 deblasio.py
 
-Print the most recent tweets that mention Mayor DeBlasio.
+Print the most recent tweets that mention Trump.
 """
 
 import sys
@@ -21,9 +21,9 @@ authenticationHandler.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth_handler = authenticationHandler)
 
 try:
-    tweets = api.search("DeBlasio", count = 3) #tweets is (like) a list.
-except tweepy.error.TweepError as tweepError:
-    print(tweepError)
+    tweets = api.search("Trump", count = 3) #tweets is (like) a list.
+except tweepy.error.TweepError as error:
+    print(error)
     sys.exit(1)
 
 def replaceEmojis(s):
