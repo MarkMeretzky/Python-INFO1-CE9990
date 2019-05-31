@@ -77,6 +77,7 @@ class Date(object):
         for i in range(n):
             self.nextDay()     #Call the instance method in line 62.
 
+    @staticmethod
     def monthsInYear():
         "Return the number of months in a year.  This function is selfless."
         return len(Date.lengths) - 1;
