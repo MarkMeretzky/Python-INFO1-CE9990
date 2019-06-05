@@ -12,7 +12,7 @@ import sqlite3
 import datetime
 import textwrap   #no output lines will be longer than 80 characters
 
-url = "https://data.cityofnewyork.us/api/views/xx67-kt59/rows.csv" \
+url = "https://data.cityofnewyork.us/api/views/43nn-pn8j/rows.csv" \
     "?accessType=DOWNLOAD"
 
 try:
