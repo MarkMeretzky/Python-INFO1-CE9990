@@ -20,6 +20,7 @@ print()
 
 print("The following module has been loaded:")
 print(sys.modules["date"])   #sys.modules is a dictionary.
+print(date.__file__)
 print()
 
 try:
