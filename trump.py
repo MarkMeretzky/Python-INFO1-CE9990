@@ -21,7 +21,7 @@ authenticationHandler.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth_handler = authenticationHandler)
 
 try:
-    tweets = api.search("Trump", count = 3) #tweets is (like) a list.
+    tweets = api.search("Trump", count = 3) #tweets is iterable.
 except tweepy.error.TweepError as error:
     print(error)
     sys.exit(1)
