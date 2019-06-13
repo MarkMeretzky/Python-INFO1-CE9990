@@ -28,14 +28,11 @@ except tweepy.error.TweepError as error:
 
 def replaceEmojis(s):
     """
-    Return the argument string with each of its emojis replaced by the
-    Unicode replacement character.
+    Return the argument string with each of its emojis (i.e., any character that
+    does not belong to the BMP) replaced by the Unicode replacement character.
     """
-    s = list(s)                 #Change the string into a list of characters.
-    for i, c in enumerate(s):
-        if ord(c) >= 0x10000:   #if c does not belong to the BMP,
-            s[i] = "\uFFFD"     #change c into the replacement character.
-    return "".join(s)           #Change the list back into a string.
+    listOfCharacters = ["\uFFFD" if ord(c) >= 0x10000 else c for c in s]
+    return "".join(listOfCharacters)   #Change the list into a string.
 
 for tweet in tweets:
     print("Created at =", tweet.created_at)
