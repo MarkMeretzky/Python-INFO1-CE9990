@@ -12,7 +12,7 @@ class Process(object):
         assert isinstance(pid, int) and isinstance(ppid, int) and isinstance(command, str)
         self.pid = pid
         self.command = command
-        self.children = [] #This newborn process has no children yet,but it will
+        self.children = [] #This newborn process has no children yet, but it will
         if pid > 0:
             parent = root.find(ppid)
             assert parent != None
@@ -32,7 +32,7 @@ class Process(object):
     def print(self, indent):
         "Print this process and all its descendants."
         assert isinstance(indent, int)
-        print("{} {:5} {}".format(indent * " ", self.pid, self.command))
+        print(f"{indent * " "} {self.pid:5} {self.command}")
         for child in sorted(self.children, key = lambda child: child.pid):
             child.print(indent + 5)
 
@@ -42,7 +42,7 @@ lines = infile.readlines()           #lines is a list of lines.
 status = infile.close()
 
 if status != None:                   #status is supposed to be None.
-    print("\"ps -A -o 'pid ppid command'\" produced exit status", status)
+    print(f"\"ps -A -o 'pid ppid command'\" produced exit status {status}.")
     sys.exit(1)
 
 root = Process(0, 0, "")  #The root process is its own parent.
