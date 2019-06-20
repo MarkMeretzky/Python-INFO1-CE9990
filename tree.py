@@ -32,7 +32,7 @@ class Process(object):
     def print(self, indent):
         "Print this process and all its descendants."
         assert isinstance(indent, int)
-        print(f"{indent * " "} {self.pid:5} {self.command}")
+        print(f'{indent * " "} {self.pid:5} {self.command}')
         for child in sorted(self.children, key = lambda child: child.pid):
             child.print(indent + 5)
 
