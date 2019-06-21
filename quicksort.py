@@ -27,11 +27,11 @@ def quicksort(a):
         return a             #a is already in order.
 
     pivot = a[len(a) // 2]   #the middle item
+    smallValues  = [item for item in a if item <  pivot]
+    mediumValues = [item for item in a if item == pivot]
+    bigValues    = [item for item in a if item >  pivot]
 
-    return \
-          quicksort([item for item in a if item <  pivot]) \
-        +           [item for item in a if item == pivot]  \
-        + quicksort([item for item in a if item >  pivot])
+    return quicksort(smallValues) + mediumValues + quicksort(bigValues)
 
 
 for year in quicksort(years):
