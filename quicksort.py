@@ -30,7 +30,6 @@ def quicksort(a):
     smallValues  = [item for item in a if item <  pivot]
     mediumValues = [item for item in a if item == pivot]
     bigValues    = [item for item in a if item >  pivot]
-
     return quicksort(smallValues) + mediumValues + quicksort(bigValues)
 
 
