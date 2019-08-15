@@ -29,7 +29,7 @@ mantissa, exponent = math.frexp(f)
 dig = sys.float_info.mant_dig        #number of binary digits occupied by the mantissa
 numerator = int(mantissa * 2 ** dig) #the numerator of the mantissa
 
-paragraph=f"""\
+paragraph = f"""\
 It is stored internally as the pair of integers {numerator:,} and {exponent}.
 {f} = ({numerator:,} / (2 ** {dig})) * (2 ** {exponent}) = {mantissa} * {2 ** exponent}
 The fraction {numerator:,} / (2 ** {dig}) is the mantissa.
