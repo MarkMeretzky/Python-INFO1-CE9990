@@ -27,5 +27,5 @@ except EOFError:
 except KeyboardInterrupt:
     sys.exit(1)
 
-print(f"Ha{5 * 'ha'}!")
+print(f"Ha{5 * ' ha'}!")
 sys.exit(0)
