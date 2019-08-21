@@ -6,7 +6,7 @@ Draw the United States flag in color on a tkinter Canvas widget.
 
 import tkinter              #in Python2, the t was uppercase
 
-stripeHeight = 20           #height of each stripe
+stripeHeight = 20           #height of each stripe, in pixels
 
 #The root widget is the window that will contain everything we draw.
 root = tkinter.Tk()
