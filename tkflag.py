@@ -22,7 +22,7 @@ canvas = tkinter.Canvas(root, highlightthickness = 0)
 
 for y in range(height):
     for x in range(width):
-        if x < width * 2/5 and y < 7 * stripeHeight:
+        if x < width * 2/5 and y < 7 * stripeHeight: #upper left corner
             color = "blue"
         elif y % (2 * stripeHeight) < stripeHeight:
             color = "red"                                     
