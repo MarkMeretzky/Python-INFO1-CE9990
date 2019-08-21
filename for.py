@@ -10,7 +10,7 @@ import sys
 i = 0
 while i < 10:
     print(i)
-    i += 1
+    i += 1   #or i = i + 1
 
 print()   #Skip a line.
 
