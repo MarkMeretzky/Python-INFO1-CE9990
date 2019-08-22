@@ -12,6 +12,8 @@ while True:
         s = input("Please type an integer in the range 1 to 10 inclusive: ")
     except EOFError:
         sys.exit(1)
+    except KeyboardInterrupt:
+        sys.exit(1)
 
     try:
         i = int(s)
