@@ -2,7 +2,7 @@
 thruway.py
 
 Print the signs going north from New York City on the New York State Thruway.
-The string consists of six lines of text.  The last line is empty.
+The string contains 5 lines of text, each ending with a newline character.
 """
 
 import sys
