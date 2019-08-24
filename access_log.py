@@ -12,11 +12,11 @@ filename = "/var/log/httpd/access_log-20190325"
 
 try:
     lines = open(filename)
-except FileNotFoundError:
-    print(f"Sorry, could not find file \"{filename}\".")
+except FileNotFoundError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
-except PermissionError:
-    print(f"Sorry, no permission to open file \"{filename}\".")
+except PermissionError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 for line in lines:
