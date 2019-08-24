@@ -22,7 +22,7 @@ except PermissionError as error:
     sys.exit(1)
 
 for line in lines:
-    print(line, end = "")   #The line already ends with a newline.
+    print(line, end = "")   #The line already ends with a newline.  Don't need another newline.
 
 lines.close()
 sys.exit(0)
