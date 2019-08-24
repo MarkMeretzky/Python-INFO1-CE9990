@@ -15,11 +15,11 @@ filename = "/Users/myname/Desktop/escalus.gif"
 
 try:
     binaryFile = open(filename, "rb")   #read binary
-except FileNotFoundError:
-    print(f"Sorry, could not find file \"{filename}\".")
+except FileNotFoundError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
-except PermissionError:
-    print(f"Sorry, no permission to open file \"{filename}\".")
+except PermissionError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 sequenceOfBytes = binaryFile.read()     #not string of characters
@@ -32,7 +32,7 @@ try:
     #The following statement cannot come before the tkinter.Tk().
     photoImage = tkinter.PhotoImage(data = sequenceOfBytes)
 except tkinter.TclError as error:
-    print(error)   #"couldn't recognize image data" when image is jpg.
+    print(error, file = sys.stderr) #"couldn't recognize image data" when image is jpg.
     sys.exit(1)
 
 root.geometry("720x480")
