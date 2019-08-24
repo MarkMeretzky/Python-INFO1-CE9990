@@ -17,7 +17,7 @@ except urllib.error.URLError as error:
 
 for line in lines:
     try:
-        s = line.decode("utf-8")   #Convert sequence of bytes to string of characters.
+        s = line.decode("utf-8") #Convert sequence of bytes to string of characters.
     except UnicodeError as error:
         print(error, file = sys.stderr)
         sys.exit(1)
