@@ -14,11 +14,11 @@ filename = "/Library/Frameworks/Python.framework/Versions/3.7/share/doc/python3.
 
 try:
     fileObject = open(filename)
-except FileNotFoundError:
-    print(f"Sorry, could not find file \"{filename}\".")
+except FileNotFoundError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
-except PermissionError:
-    print(f"Sorry, no permission to open file \"{filename}\".")
+except PermissionError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 oneBigString = fileObject.read()   #Read the entire file.
