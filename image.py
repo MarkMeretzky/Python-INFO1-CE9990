@@ -6,6 +6,7 @@ for line in lines:
 """
 
 import sys
+import imghdr   #image header
 import tkinter
 
 #macOS
@@ -22,6 +23,7 @@ except PermissionError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
+print(f"The image is of type {imghdr.what(binaryFile)}.")
 sequenceOfBytes = binaryFile.read()     #not string of characters
 binaryFile.close()
 print(f"len(sequenceOfBytes) = {len(sequenceOfBytes):,}")
