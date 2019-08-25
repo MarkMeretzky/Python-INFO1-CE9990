@@ -23,9 +23,9 @@ except PermissionError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
-print(f"The image is of type {imghdr.what(binaryFile)}.")
 sequenceOfBytes = binaryFile.read()     #not string of characters
 binaryFile.close()
+print(f"The image is of type {imghdr.what(None, h = sequenceOfBytes)}.")
 print(f"len(sequenceOfBytes) = {len(sequenceOfBytes):,}")
 
 root = tkinter.Tk()
