@@ -31,9 +31,14 @@ n = len(months)
 
 for i in range(1, n):
     if month == months[i]:
-        print(f"Thank you, {month} is month number {i}.")
-        sys.exit(0)
+        break
+else
+    #Arrive here if we completed all n loops.
+    #That means we did not find the word we were looking for.
+    print(f"Bad month \"{month}\".")
+    sys.exit(1)
 
-#Arrive here if we did not find the word we were looking for.
-print(f"Bad month \"{month}\".")
-sys.exit(1)
+#Arrive here if we broke out of the loop with the break statement.
+#That means we found the word we were looking for.
+print(f"Thank you, {month} is month number {i}.")
+sys.exit(0)
