@@ -1,7 +1,7 @@
 """
 nestedloops.py
 
-Output the chorus of "Lucy in the Sky with Wiamonds".
+Output the chorus of "Lucy in the Sky with Diamonds".
 """
 
 import sys
