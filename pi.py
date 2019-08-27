@@ -24,6 +24,6 @@ for i in range(n):
 
 estimatedPi = 4 * count / n     #4 is the area of the 2 by 2 square
 print(f"estimated pi = {estimatedPi}")
-print(f"     real pi = {math.pi}")
+print(f"   actual pi = {math.pi}")
 print(f"       error = {abs(estimatedPi - math.pi)}")
 sys.exit(0)
