@@ -7,10 +7,10 @@ Read and print a text file, line by line.
 import sys
 
 #macOS
-filename = "/Library/Frameworks/Python.framework/Versions/3.7/share/doc/python3.7/examples/Tools/demo/beer.py"
+filename = "/Library/Frameworks/Python.framework/Versions/3.7/share/doc/python3.7/examples/Tools/demo/README"
 
 #Microsoft Windows
-#filename = "C:\\Users\\Myname\\AppData\\Local\\Programs\\Python\\Python37-32\\Tools\\demo\\beer.py"
+#filename = "C:\\Users\\Myname\\AppData\\Local\\Programs\\Python\\Python37-32\\Tools\\demo\\README"
 
 try:
     lines = open(filename) #lines is something you can loop through with a for loop
