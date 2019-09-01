@@ -18,7 +18,7 @@ def getInt(prompt):
     try:
         i = int(s)
     except ValueError:
-        print(f"Sorry, \"{s}\" is not an integer.")
+        print(f'Sorry, "{s}" is not an integer.')
         sys.exit(1)
 
     return i
