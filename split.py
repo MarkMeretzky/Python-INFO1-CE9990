@@ -14,13 +14,10 @@ that among these are Life, Liberty, and the pursuit of Happiness.
 """
 
 print(preamble)                  #preamble is one big string.  It is not a list.
-print()
 
 phrases = preamble.split(",\n")   #phrases is a list of 4 strings
 for i, phrase in enumerate(phrases, start = 1):
     print(i, phrase)
-
-print()
 
 words = preamble.split()         #words is a list of 35 strings
 for i, word in enumerate(words, start = 1):
