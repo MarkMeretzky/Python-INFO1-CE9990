@@ -13,13 +13,13 @@ that they are endowed by their Creator with certain unalienable Rights,
 that among these are Life, Liberty, and the pursuit of Happiness.
 """
 
-print(preamble)                  #preamble is one big string.  It is not a list.
+print(preamble)                 #preamble is one big string.  It is not a list.
 
-phrases = preamble.split(",\n")   #phrases is a list of 4 strings
+phrases = preamble.split(",\n") #phrases is a list of 4 strings
 for i, phrase in enumerate(phrases, start = 1):
     print(i, phrase)
 
-words = preamble.split()         #words is a list of 35 strings
+words = preamble.split()        #words is a list of 35 strings
 for i, word in enumerate(words, start = 1):
     print(i, word)
 
