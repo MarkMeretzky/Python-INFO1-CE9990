@@ -12,7 +12,7 @@ import tkinter
 #macOS
 filename = "/Users/myname/Desktop/escalus.gif"
 #Microsoft Windows
-#filename = "C:\\Users\\Myname\\Desktop\\escalus.gif"
+#filename = r"C:\Users\Myname\Desktop\escalus.gif"
 
 try:
     binaryFile = open(filename, "rb")   #read binary
