@@ -17,4 +17,5 @@ print()   #Skip a line.
 for i in range(0, 10, 1):   #range(0, 10) or range(10) would do the same thing
     print(i)
 
+print(f"The value of i after the for loop is over is {i}.")
 sys.exit(0)
