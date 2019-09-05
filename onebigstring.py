@@ -23,5 +23,5 @@ except PermissionError as error:
 
 oneBigString = fileObject.read()   #Read the entire file.
 fileObject.close()
-print(oneBigString)
+print(oneBigString, end = "")
 sys.exit(0)
