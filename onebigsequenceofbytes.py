@@ -16,6 +16,8 @@ except urllib.error.URLError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
+print(f"status = {fileObject.status}")
+print(f"msg = {fileObject.msg}")
 sequenceOfBytes = fileObject.read()
 fileObject.close()
 
