@@ -30,7 +30,7 @@ months = [
 try:
     i = months.index(month)
 except ValueError:
-    print(f"Bad month \"{month}\".")
+    print(f'Bad month "{month}".')
     sys.exit(1)
 
 print(f"Thank you, {month} is month number {i}.")
