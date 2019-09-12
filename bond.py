@@ -31,7 +31,7 @@ for line in lines:
     print(line, end = "")  #end="" because each line already ends with a newline
 
 print()
-lines.sort()               #into alphabetical order
+lines.sort(key = lambda line: line[5:])   #into alphabetical order
 
 for line in lines:
     print(line, end = "")
