@@ -24,16 +24,12 @@ except PermissionError:
     print(f'Sorry, no permission to open file "{filename}".')
     sys.exit(1)
 
-lines = infile.readlines() #lines is a list of strings
+lines = infile.readlines()   #lines is a list of strings
 infile.close()
 
-for line in lines:
-    print(line, end = "")  #end="" because each line already ends with a newline
+sortedLines = sorted(lines, key = lambda line: line[5:]) #alphabetical order by movie name
 
-print()
-lines.sort(key = lambda line: line[5:])   #alphabetical order by movie name
-
-for line in lines:
-    print(line, end = "")
+for line, sortedLine in zip(lines, sortedLines):
+    print(f"{line:36} {sortedLine}")
 
 sys.exit(0)
