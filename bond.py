@@ -12,16 +12,16 @@ if sys.platform.startswith("darwin"):    #macOS Mojave 10.14.6
 elif sys.platform.startswith("win32"):   #Microsoft Windows 7 Home Premium
     filename = r"C:\Users\Myname\Desktop\bond.txt"
 else:
-    print(f"Unknown platform {sys.platform}")
+    print(f"Unknown platform {sys.platform}", file = sys.stderr)
     sys.exit(1)
 
 try:
     infile = open(filename)
 except FileNotFoundError:
-    print(f'Sorry, could not find file "{filename}".')
+    print(f'Sorry, could not find file "{filename}".', file = sys.stderr)
     sys.exit(1)
 except PermissionError:
-    print(f'Sorry, no permission to open file "{filename}".')
+    print(f'Sorry, no permission to open file "{filename}".', file = sys.stderr)
     sys.exit(1)
 
 lines = infile.readlines()   #lines is a list of strings
