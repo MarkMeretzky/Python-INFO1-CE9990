@@ -26,10 +26,9 @@ except PermissionError:
 
 lines = infile.readlines()   #lines is a list of strings
 infile.close()
-
 sortedLines = sorted(lines, key = lambda line: line[5:]) #alphabetical order by movie name
 
 for line, sortedLine in zip(lines, sortedLines):
-    print(f"{line:36} {sortedLine}")
+    print(f"{line.rstrip():36} {sortedLine.rstrip()}")
 
 sys.exit(0)
