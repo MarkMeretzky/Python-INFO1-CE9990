@@ -7,10 +7,10 @@ Each line in the file will be a separate list item.
 
 import sys
 
-if sys.platform.startswith("darwin"):    #macOS Sierra 10.12.5
+if sys.platform.startswith("darwin"):    #macOS Mojave 10.14.6
     filename = "/Users/myname/Desktop/bond.txt"
 elif sys.platform.startswith("win32"):   #Microsoft Windows 7 Home Premium
-    filename = "C:\\Users\\Myname\\Desktop\\bond.txt"
+    filename = r"C:\Users\Myname\Desktop\bond.txt"
 else:
     print(f"Unknown platform {sys.platform}")
     sys.exit(1)
@@ -18,10 +18,10 @@ else:
 try:
     infile = open(filename)
 except FileNotFoundError:
-    print(f"Sorry, could not find file \"{filename}\".")
+    print(f'Sorry, could not find file "{filename}".')
     sys.exit(1)
 except PermissionError:
-    print(f"Sorry, no permission to open file \"{filename}\".")
+    print(f'Sorry, no permission to open file "{filename}".')
     sys.exit(1)
 
 lines = infile.readlines() #lines is a list of strings
