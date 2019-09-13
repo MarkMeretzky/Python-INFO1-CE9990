@@ -15,7 +15,7 @@ while factor <= n:
 
     while n % factor == 0:   #while factor is a factor of n
         print(factor)
-        n /= factor          #Make n smaller.  It means n = n / factor
+        n //= factor          #Make n smaller.  It means n = n // factor
 
     factor += 1
 
