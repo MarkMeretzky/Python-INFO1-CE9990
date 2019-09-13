@@ -35,7 +35,7 @@ for i in range(1, n):
 else:
     #Arrive here if we completed all n loops.
     #That means we did not find the word we were looking for.
-    print(f"Bad month \"{month}\".")
+    print(f'Bad month "{month}".')
     sys.exit(1)
 
 #Arrive here if we broke out of the loop with the break statement.
