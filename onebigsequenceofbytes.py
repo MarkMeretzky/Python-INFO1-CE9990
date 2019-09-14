@@ -18,6 +18,11 @@ except urllib.error.URLError as error:
 
 print(f"status = {fileObject.status}")
 print(f"msg = {fileObject.msg}")
+listOfHeaders = fileObject.getheaders()
+for header, value in listOfHeaders:
+    print(f"{header:14} {value}")
+print()
+
 sequenceOfBytes = fileObject.read()
 fileObject.close()
 
