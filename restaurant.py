@@ -10,12 +10,12 @@ import csv   #Comma-separated values.  Do not name this Python script csv.py.
 filename = "DOHMH_New_York_City_Restaurant_Inspection_Results.csv"
 
 try:
-    csvfile = open(filename, encoding = "utf-8", newline = "")
+    csvfile = open(filename)
 except FileNotFoundError:
-    print(f"Sorry, could not find file \"{filename}\".")
+    print(f'Sorry, could not find file "{filename}".')
     sys.exit(1)
 except PermissionError:
-    print(f"Sorry, no permission to open file \"{filename}\".")
+    print(f'Sorry, no permission to open file "{filename}".')
     sys.exit(1)
 
 lines = csv.reader(csvfile)
