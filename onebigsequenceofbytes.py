@@ -7,6 +7,7 @@ Convert the sequence of bytes to a string of characters, and print it.
 
 import sys
 import urllib.request
+import http.server
 
 url = "http://oit2.scps.nyu.edu/~meretzkm/python/string/romeo.txt"
 
@@ -16,8 +17,10 @@ except urllib.error.URLError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
-print(f"status = {fileObject.status}")
-print(f"msg = {fileObject.msg}")
+print(f"status = {fileObject.status}")                         #integer
+print(f"msg = {fileObject.msg}")                               #short message
+print(http.server.BaseHTTPRequestHandler.responses[status][1]) #longer message
+
 listOfHeaders = fileObject.getheaders()
 for header, value in listOfHeaders:
     print(f"{header:14} {value}")
