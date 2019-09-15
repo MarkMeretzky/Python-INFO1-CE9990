@@ -17,9 +17,11 @@ except urllib.error.URLError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
-print(f"status = {fileObject.status}")                         #integer
+status = fileObject.status   #integer
+print(f"status = {status}")
 print(f"msg = {fileObject.msg}")                               #short message
 print(http.server.BaseHTTPRequestHandler.responses[status][1]) #longer message
+print()
 
 listOfHeaders = fileObject.getheaders()
 for header, value in listOfHeaders:
