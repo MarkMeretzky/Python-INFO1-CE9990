@@ -62,7 +62,7 @@ print("my top3LongExp =")
 for date in dates:
     today = [line[1] for line in lines if line[0] == date]
     highestExps = sorted(today)[-n:]
-    print(f'{date:14}{sum(highestExps):.6e}')
+    print(f'{str(date):14}{sum(highestExps):.6e}')
 
 print()
 
@@ -74,6 +74,6 @@ for date in dates:
     today = [line for line in lines if line[0] == date]
     highestExps = sorted(today, key = lambda item: item[1])[-n:]
     s = sum([line[2] for line in highestExps]) #line[1] is exp, line[2] is perf.
-    print(f'{date:14}{s:9.2f}')
+    print(f'{str(date):14}{s:9.2f}')
 
 sys.exit(0)
