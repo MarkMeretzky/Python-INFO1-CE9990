@@ -37,10 +37,10 @@ filename = "Returns.csv"
 try:
     csvfile = open(filename, encoding = "utf-8", newline = "")
 except FileNotFoundError:
-    print("Sorry, could not find file \"", filename, "\".", sep = "")
+    print(f'Sorry, could not find file "{filename}".', file = sys.stderr)
     sys.exit(1)
 except PermissionError:
-    print("Sorry, no permission to open file \"", filename, "\".", sep = "")
+    print(f'Sorry, no permission to open file "{filename}".', file = sys.stderr)
     sys.exit(1)
 
 reader = csv.reader(csvfile)
@@ -62,7 +62,7 @@ print("my top3LongExp =")
 for date in dates:
     today = [line[1] for line in lines if line[0] == date]
     highestExps = sorted(today)[-n:]
-    print("{}{:4}{:.6e}".format(date, " ", sum(highestExps)))
+    printf(f'{date}{" ":4}{sum(highestExps):.6e}')
 
 print()
 
@@ -74,6 +74,6 @@ for date in dates:
     today = [line for line in lines if line[0] == date]
     highestExps = sorted(today, key = lambda item: item[1])[-n:]
     s = sum([line[2] for line in highestExps]) #line[1] is exp, line[2] is perf.
-    print("{}{:4}{:9.2f}".format(date, " ", s))
+    print(f'{date}{" ":4}{s:9.2f}')
 
 sys.exit(0)
