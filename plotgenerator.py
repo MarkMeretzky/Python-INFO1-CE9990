@@ -115,7 +115,7 @@ print("Keep pressing return, or control-d to exit.") #control-z enter in Microso
 
 while True:
     try:
-        input()
+        _ = input()
     except EOFError:
         sys.exit(0)
 
