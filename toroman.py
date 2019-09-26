@@ -13,7 +13,7 @@ thousands = ["", "M", "MM", "MMM", "MMMM"]
 
 def toRoman(n):
     "Convert one integer to a Roman numeral."
-    assert isinstance(n, int) and 1 <= n and n <= 4999
+    assert isinstance(n, int) and 1 <= n <= 4999
     
     d = f"{n:04}"   #d is a string of 4 digits
     
