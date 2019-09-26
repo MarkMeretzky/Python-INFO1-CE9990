@@ -47,7 +47,6 @@ while True:
             print(f'Sorry, "{s}" is not an integer.')
             sys.exit(1)
         
-        n = getInt("")
         if 1 <= n <= 4999:
             break
         print(f"Sorry, {n} is out of range.")
