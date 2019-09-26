@@ -38,6 +38,9 @@ while True:
         except EOFError:
             sys.exit(0)
             
+        if not s:   #The user pressed return without typing anything.
+            sys.exit(0)
+            
         try:
             n = int(s)
         except ValueError:
