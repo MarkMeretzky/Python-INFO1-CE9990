@@ -7,7 +7,7 @@ Find the closest street to any address on a Manhattan avenue.
 import sys
 import tkinter
 
-#Each avenue has a list of one or more rules.  The last rule in an avenue's list must have a building number of m, which is 
+#Each avenue has a list of one or more rules.  The last rule in an avenue's list
 #must have a building number of m, which is an integer bigger than any possible
 #building number.
 m = sys.maxsize
