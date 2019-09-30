@@ -111,7 +111,7 @@ while True:
     try:
         buildingNumber = int(s)
     except ValueError:
-        print(f"Sorry, {s} is not an integer.")
+        print(f'Sorry, "{s}" is not an integer.')
         print()
         continue
 
@@ -133,7 +133,7 @@ while True:
     try:
         avenueNumber = int(s)
     except ValueError:
-        print(f"Sorry, {s} is not an integer.")
+        print(f'Sorry, "{s}" is not an integer.')
         print()
         continue
 
