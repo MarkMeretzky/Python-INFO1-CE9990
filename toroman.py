@@ -15,19 +15,19 @@ def toRoman(n):
     "Convert one integer to a Roman numeral."
     assert isinstance(n, int) and 1 <= n <= 4999
     
-    d = f"{n:04}"   #d is a string of 4 digits
+    d = f"{n:04}"    #d is a string of 4 digits.
     
-    i = int(d[-1])  #the rightmost digit
-    s = ones[i]
+    i = int(d[0])    #d[0] is the leftmost digit.
+    s = thousands[i]
     
-    i = int(d[-2])  #the next-to-rightmost digit
-    s = tens[i] + s
+    i = int(d[1])    #d[1] is the next-to-leftmost digit.
+    s += hundreds[i] #or s = s + hundreds[i]
     
-    i = int(d[-3])
-    s = hundreds[i] + s
+    i = int(d[2])    #d[2] is the third-from-leftmost digit.
+    s += tens[i]
     
-    i = int(d[-4])
-    s = thousands[i] + s
+    i = int(d[3])    #d[3] is the fourth-from-leftmost digit.
+    s += ones[i]
 
     return s
 
