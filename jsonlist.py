@@ -16,8 +16,8 @@ print()
 #Convert the string of characters into a list of numbers.
 try:
     listOfNumbers = json.loads(s)
-except json.JSONDecodeError as jSONDecodeError:
-    print(jSONDecodeError)
+except json.JSONDecodeError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 #Now that we have a list of numbers,
@@ -32,8 +32,8 @@ print("Pretty print the listOfNumbers.")
 
 try:
     s = json.dumps(listOfNumbers)
-except TypeError as typeError:
-    print(typeError)
+except TypeError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 print(s)
