@@ -1,8 +1,8 @@
 """
 jsonlist.py
 
-Convert a string that looks like a list of numbers
-into an actual Python list of numbers.
+Convert a string that looks like a list of ints
+into an actual Python list of ints.
 """
 
 import sys
@@ -13,25 +13,25 @@ print("type(s) = {type(s)}")
 print(f"s = {s}")
 print()
 
-#Convert the string of characters into a list of numbers.
+#Convert the string of characters into a list of ints.
 try:
-    listOfNumbers = json.loads(s)
+    listOfInts = json.loads(s)
 except json.JSONDecodeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
-#Now that we have a list of numbers,
-#we can loop through the numbers with a for loop.
-print(f"type(listOfNumbers) = {type(listOfNumbers)}")
-for n in listOfNumbers:
+#Now that we have a list of ints,
+#we can loop through the ints with a for loop.
+print(f"type(listOfInts) = {type(listOfInts)}")
+for n in listOfInts:
     print(n)
 print()
 
-#Convert the list of numbers back into a string of characters.
-print("Pretty print the listOfNumbers.")
+#Convert the list of ints back into a string of characters.
+print("Pretty print the listOfInts.")
 
 try:
-    s = json.dumps(listOfNumbers)
+    s = json.dumps(listOfInts)
 except TypeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
