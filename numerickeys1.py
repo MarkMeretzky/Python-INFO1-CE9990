@@ -22,7 +22,7 @@ words = {
 
 while True:
     try:
-        s = input("Please type an integer from 1 to 10: ")
+        s = input("Please type an integer from 1 to 10 inclusive: ")
     except EOFError:
         sys.exit(0)
 
@@ -37,7 +37,7 @@ while True:
     try:
         word = words[n]
     except KeyError:
-        print(f"Sorry, {s} is not an integer in the range 1 to 10.")
+        print(f"Sorry, {s} is not an integer in the range 1 to 10 inclusive.")
         print("Try again.")
         print()
         continue   #Go back up to the word "while".
