@@ -10,7 +10,7 @@ import json                #JavaScript Object Notation
 
 s = "[10, 20, 30, 40,50]"  #deliberately omitted a space
 print("type(s) = {type(s)}")
-print("s = {s}")
+print(f"s = {s}")
 print()
 
 #Convert the string of characters into a list of numbers.
