@@ -7,15 +7,15 @@ notes is a list of seven lists.
 
 import sys
 
-notes = [
-    ["do", "deer, a female deer"],
-    ["re", "drop of golden sun"],
-    ["me", "name I call myself"],
-    ["fa", "long, long way to run"],
-    ["so", "needle pulling thread"],
-    ["la", "note to follow so"],
-    ["ti", "drink with jam and bread"]
-]
+notes = (
+    ("do", "deer, a female deer"),
+    ("re", "drop of golden sun"),
+    ("me", "name I call myself"),
+    ("fa", "long, long way to run"),
+    ("so", "needle pulling thread"),
+    ("la", "note to follow so"),
+    ("ti", "drink with jam and bread")
+)
 
 while True:
     try:
