@@ -10,7 +10,7 @@ import json                #JavaScript Object Notation
 s = """\
 {
    "name": "Mark",
-   "age": 63,
+   "age": 64,
    "favorite years": [1965, 1982, 1995],
    "IKEA language": {"Billy": "bookcase", "Sladda": "bike", "Klippan": "sofa"}
 }"""
