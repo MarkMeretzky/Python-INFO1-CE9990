@@ -39,7 +39,7 @@ print()
 
 try:
     dictionary = json.loads(s)          #dictionary is a dictionary.
-except json.JSONDecodeError error:
+except json.JSONDecodeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
