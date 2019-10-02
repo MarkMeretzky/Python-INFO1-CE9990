@@ -21,14 +21,14 @@ numbers = {
 
 while True:
     try:
-        word = input("Please type the word for a number from one to ten: ")
+        word = input("Please type the word for a number from one to ten inclusive: ")
     except EOFError:
         sys.exit(0)
 
     try:
         number = numbers[word]   #number is an int
     except KeyError:
-        print(f'Sorry, "{word}" is not a number in the range one to ten.')
+        print(f'Sorry, "{word}" is not a number in the range one to ten inclusive.')
         print()
         continue   #Go back up to the word "while".
     
