@@ -7,7 +7,7 @@ notes is a list of seven lists.
 
 import sys
 
-notes = (
+notes = (   #a tuple of 7 tuples
     ("do", "deer, a female deer"),
     ("re", "drop of golden sun"),
     ("me", "name I call myself"),
