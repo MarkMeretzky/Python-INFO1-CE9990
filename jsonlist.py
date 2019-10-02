@@ -15,7 +15,7 @@ print()
 
 #Convert the string of characters into a list of ints.
 try:
-    listOfInts = json.loads(s)
+    listOfInts = json.loads(s)   #Deserialize the string s.
 except json.JSONDecodeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
@@ -31,7 +31,7 @@ print()
 print("Pretty print the listOfInts.")
 
 try:
-    s = json.dumps(listOfInts)
+    s = json.dumps(listOfInts)   #Serialize the listOfInts.
 except TypeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
