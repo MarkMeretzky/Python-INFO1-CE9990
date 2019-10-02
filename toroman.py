@@ -6,10 +6,10 @@ Convert an integer to a Roman numeral.
 
 import sys
 
-ones      = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
-tens      = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
-hundreds  = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
 thousands = ["", "M", "MM", "MMM", "MMMM"]
+hundreds  = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
+tens      = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
+ones      = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
 
 def toRoman(n):
     "Convert one integer to a Roman numeral."
