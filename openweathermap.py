@@ -30,8 +30,8 @@ infile.close()
 
 try:
     s = sequenceOfBytes.decode("utf-8") #s is a string.
-except UnicodeError as unicodeError:
-    print("UnicodeError", unicodeError)
+except UnicodeError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 print(s)
@@ -39,8 +39,8 @@ print()
 
 try:
     dictionary = json.loads(s)          #dictionary is a dictionary.
-except json.JSONDecodeError as jSONDecodeError:
-    print("json.JSONDecodeError", jSONDecodeError)
+except json.JSONDecodeError error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 print(dictionary)
@@ -49,27 +49,27 @@ print()
 #json.dumps ("dump string") returns a pretty (i.e., nicely indented) string.
 try:
     print(json.dumps(dictionary, indent = 4, sort_keys = True))
-except TypeError as typeError:
-    print("TypeError", typeError)
+except TypeError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 print()
 
 try:
     main = dictionary["main"]               #main is a dictionary
 except TypeError:
-    print("dictionary is not a dictionary")
+    print("dictionary is not a dictionary", file = sys.stderr)
     sys.exit(1)
 except KeyError:
-    print("dictionary has no key named main")
+    print("dictionary has no key named main", file = sys.stderr)
     sys.exit(1)
 
 try:
     temp = main["temp"]                     #temp is a float
 except TypeError:
-    print("main is not a dictionary")
+    print("main is not a dictionary", file = sys.stderr)
     sys.exit(1)
 except KeyError:
-    print("main has no key named temp")
+    print("main has no key named temp", file = sys.stderr)
     sys.exit(1)
 
 print(f"temperature = {temp}° Fahrenheit")
