@@ -23,7 +23,7 @@ while True:
     except EOFError:
         sys.exit(0)
 
-    for note in notes:   #note is a list of two strings
+    for note in notes: #note is a list of 2 strings, note[0] and note[1]
         if note[0] == n:
             print(f"{n.capitalize()}, a {note[1]}.")
             break        #Break out of the for loop, skipping the else.
