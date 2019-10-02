@@ -1,8 +1,8 @@
 """
 githubusers.py
 
-Print the GitHub loginname of each person who owns a repository named
-Python-INFO1-CE9990
+Print the GitHub loginname of each person who owns an organization whose name includes
+SF19PB1-
 starting with the most recently modified repository.
 """
 
@@ -13,7 +13,7 @@ import urllib.request
 url = (
     "https://api.github.com/search/users"
     "?utf8=%E2%9C%93"
-    "&q=WS19PB02-"
+    "&q=SF19PB1-"
     "&type=organizations"
 )
 
@@ -25,22 +25,22 @@ request = urllib.request.Request(url, headers = headers)
 try:
     infile = urllib.request.urlopen(request)
 except urllib.error.URLError as error:
-    print("urllib.error.URLError", error)
-    sys.exit(1)
+    print(error)
+    sys.exit(1, file = sys.stderr)
 
 sequenceOfBytes = infile.read()
 infile.close()
 
 try:
     s = sequenceOfBytes.decode("utf-8")
-except UnicodeError as unicodeError:
-    print("UnicodeError", unicodeError)
+except UnicodeError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 try:
     dictionary = json.loads(s)
-except json.JSONDecodeError as jSONDecodeError:
-    print(jSONDecodeError)
+except json.JSONDecodeError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 items = dictionary["items"]       #items is a list
@@ -53,7 +53,7 @@ len(dictionary["items"]) = {len(items)}
 
 items.sort(key = lambda item: item["html_url"])   #alphabetical order
 
-for i, item in enumerate(items, start = 1): #i is an int, items is a dictionary
+for i, item in enumerate(items, start = 1): #i is an int, item is a dictionary
     print(i, item["html_url"])
     
 sys.exit(0)
