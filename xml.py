@@ -22,7 +22,7 @@ url = f"http://api.openweathermap.org/data/2.5/weather?{params}"
 try:
     infile = urllib.request.urlopen(url)
 except urllib.error.URLError as error:
-    print(error. file = sys.stderr)
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 sequenceOfBytes = infile.read()         #Read the entire input file.
