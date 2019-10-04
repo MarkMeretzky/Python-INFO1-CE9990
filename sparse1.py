@@ -121,5 +121,5 @@ while True:
     else:
         b = "Nothing famous"
 
-    print(b, "is on that street.")
+    print(f"{b} is on that street.")
     print()
