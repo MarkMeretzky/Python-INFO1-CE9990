@@ -9,10 +9,13 @@ import os
 
 infile = os.popen("ps -A -o comm")   #Create a child process and a pipe.
 lines = infile.readlines()           #lines is a list of lines.
-status = infile.close()
+i = infile.close()
 
-if status != None:                   #status is supposed to be None.
-    print(f'"ps -A -o comm" produced exit status {status}.')
+if i:                                #i is supposed to be None.
+    if i > 0:
+        print(f'"ps -A -o comm" produced exit status {i >> 8}.')
+    else:
+        print(f'"ps -A -o comm" was killed by signal number {-i} before it could produce an exit status.')
     sys.exit(1)
 
 lines = set(lines[1:])                          #Remove 1st item & extra copies.
