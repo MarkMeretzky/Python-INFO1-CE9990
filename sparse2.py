@@ -25,10 +25,10 @@ while True:
     except:  #if user did not type a valid int
         sys.exit(0)
 
-    if st in buildings:
+    try:
         b = buildings[st]
-    else:
+    except KeyError:
         b = "Nothing famous"
 
-    print(b, "is on that street.")
+    print(f"{b} is on that street.")
     print()
