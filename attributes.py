@@ -26,7 +26,7 @@ while True:
         sys.exit(0)
 
     try:
-        print(f"{key} is {attributes[key]}.")
+        print(f"The attribute {key} is {attributes[key]}.")
     except KeyError:
         print(f'Sorry, "{key}" is not an attribute.')
 
