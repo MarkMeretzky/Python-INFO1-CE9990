@@ -21,7 +21,7 @@ while True:
     print()
     
     try:
-        key = input("What attribute do you want to see? ")
+        key = input("What attribute do you want to see (e.g., name)? ")
     except EOFError:
         sys.exit(0)
 
