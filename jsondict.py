@@ -9,10 +9,10 @@ import json                #JavaScript Object Notation
 
 s = """\
 {
-   "name": "Mark",
-   "age": 64,
+   "name":           "Mark",
+   "age":            64,
    "favorite years": [1965, 1982, 1995],
-   "IKEA language": {"Billy": "bookcase", "Sladda": "bike", "Klippan": "sofa"}
+   "IKEA language":  {"Billy": "bookcase", "Sladda": "bike", "Klippan": "sofa"}
 }"""
 
 print(f"type(s) = {type(s)}")
@@ -26,9 +26,10 @@ except json.JSONDecodeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
+print(f"type(dictionary) = {type(dictionary)}")
+
 #Now that we have a dictionary,
 #we can loop through the items with a for loop.
-print(f"type(dictionary) = {type(dictionary)}")
 for key, value in dictionary.items():
     print(f"{key} = {value}")
 print()
