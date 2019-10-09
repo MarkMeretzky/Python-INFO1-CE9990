@@ -11,7 +11,7 @@ attributes = {
     "age":            64.25,             #float
     "citizenship":    True,              #bool
     "leaning":        "flaming liberal", #string
-    "favorite years": [1968, 2001, 2019] #list
+    "favorite years": (1968, 2001, 2019) #tuple
 }
 
 while True:
