@@ -12,7 +12,6 @@ import urllib.parse
 import urllib.request
 
 query = {
-    "utf8": "%E2%9C%93",
     "q":    "SF19PB1-",
     "type": "organizations"
 }
