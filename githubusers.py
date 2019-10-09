@@ -8,14 +8,17 @@ starting with the most recently modified repository.
 
 import sys
 import json
+import urllib.parse
 import urllib.request
 
-url = (
-    "https://api.github.com/search/users"
-    "?utf8=%E2%9C%93"
-    "&q=SF19PB1-"
-    "&type=organizations"
-)
+query = {
+    "utf8": "%E2%9C%93",
+    "q":    "SF19PB1-",
+    "type": "organizations"
+}
+
+params = urllib.parse.urlencode(query)
+url = f"https://api.github.com/search/users?{params}"
 
 headers = {    #a dictionary
     "Accept": "application/vnd.github.preview+json"
