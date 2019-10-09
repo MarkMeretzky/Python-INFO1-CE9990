@@ -7,7 +7,7 @@ import sys
 
 attributes = {
     "name":           "Mark",            #string
-    "zipcode":        10705,             #int
+    "zipcode":        10003,             #int
     "age":            64.25,             #float
     "citizenship":    True,              #bool
     "leaning":        "flaming liberal", #string
