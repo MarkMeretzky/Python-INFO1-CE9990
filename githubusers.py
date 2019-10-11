@@ -53,7 +53,7 @@ type(dictionary["items"]) = {type(items)}
 len(dictionary["items"]) = {len(items)}
 """)
 
-items.sort(key = lambda item: item["html_url"])   #alphabetical order
+items.sort(key = lambda item: item["html_url"].lower()) #case-insensitive alphabetical order
 
 for i, item in enumerate(items, start = 1): #i is an int, item is a dictionary
     print(i, item["html_url"])
