@@ -74,6 +74,7 @@ except KeyError:
 
 print(f"temperature = {temp}° Fahrenheit")
 
-#Throw caution to the winds.
+#Throw caution to the wind.
 print(f'temperature = {dictionary["main"]["temp"]}° Fahrenheit')
+print(f'description = {dictionary["weather"][0]["description"]}')
 sys.exit(0)
