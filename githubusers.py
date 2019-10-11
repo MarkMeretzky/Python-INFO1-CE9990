@@ -40,17 +40,17 @@ except UnicodeError as error:
     sys.exit(1)
 
 try:
-    dictionary = json.loads(s)
+    bigDictionary = json.loads(s)
 except json.JSONDecodeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
-items = dictionary["items"]       #items is a list
+items = bigDictionary["items"]       #items is a list
 print(f"""\
-dictionary["incomplete_results"] = {dictionary["incomplete_results"]}
-dictionary["total_count"] = {dictionary["total_count"]}
-type(dictionary["items"]) = {type(items)}
-len(dictionary["items"]) = {len(items)}
+bigDictionary["incomplete_results"] = {bigDictionary["incomplete_results"]}
+bigDictionary["total_count"] = {bigDictionary["total_count"]}
+type(bigDictionary["items"]) = {type(items)}
+len(bigDictionary["items"]) = {len(items)}
 """)
 
 items.sort(key = lambda item: item["html_url"].lower()) #case-insensitive alphabetical order
