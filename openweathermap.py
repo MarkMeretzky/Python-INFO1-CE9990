@@ -38,29 +38,29 @@ print(s)
 print()
 
 try:
-    dictionary = json.loads(s)          #dictionary is a dictionary.
+    bigDictionary = json.loads(s)          #bigDictionary is a dict
 except json.JSONDecodeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
-print(dictionary)
+print(bigDictionary)
 print()
 
 #json.dumps ("dump string") returns a pretty (i.e., nicely indented) string.
 try:
-    print(json.dumps(dictionary, indent = 4, sort_keys = True))
+    print(json.dumps(bigDictionary, indent = 4, sort_keys = True))
 except TypeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 print()
 
 try:
-    main = dictionary["main"]               #main is a dictionary
+    main = bigDictionary["main"]            #main is a dict
 except TypeError:
-    print("dictionary is not a dictionary", file = sys.stderr)
+    print("bigDictionary is not a dictionary", file = sys.stderr)
     sys.exit(1)
 except KeyError:
-    print("dictionary has no key named main", file = sys.stderr)
+    print("bigDictionary has no key named main", file = sys.stderr)
     sys.exit(1)
 
 try:
@@ -75,6 +75,6 @@ except KeyError:
 print(f"temperature = {temp}° Fahrenheit")
 
 #Throw caution to the wind.
-print(f'temperature = {dictionary["main"]["temp"]}° Fahrenheit')
-print(f'description = {dictionary["weather"][0]["description"]}')
+print(f'temperature = {bigDictionary["main"]["temp"]}° Fahrenheit')  #bigDictionary["main"] is a dict
+print(f'description = {bigDictionary["weather"][0]["description"]}') #bigDictionary["weather"] is a list
 sys.exit(0)
