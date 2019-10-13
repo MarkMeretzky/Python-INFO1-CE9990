@@ -15,7 +15,7 @@ def oneArg(arg0):
     assert isinstance(arg0, list) or isinstance(arg0, tuple)
     print("oneArg:", end = "")
     for arg in arg0:
-        print(f" {arg}, end = "")
+        print(f" {arg}", end = "")
     print()
 
 threeArgs("Moe", "Larry", "Curly")
