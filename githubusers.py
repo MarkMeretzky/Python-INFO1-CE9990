@@ -45,6 +45,15 @@ except json.JSONDecodeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
 
+try:
+    s = json.dumps(bigDictionary, indent = 4, sort_keys = True)
+except TypeError as error:
+    print(error, file = sys.stderr)
+    sys.exit(1)
+
+print(s)
+print()
+
 items = bigDictionary["items"]       #items is a list
 print(f"""\
 bigDictionary["incomplete_results"] = {bigDictionary["incomplete_results"]}
