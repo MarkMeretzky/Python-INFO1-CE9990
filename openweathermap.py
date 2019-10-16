@@ -48,10 +48,12 @@ print()
 
 #json.dumps ("dump string") returns a pretty (i.e., nicely indented) string.
 try:
-    print(json.dumps(bigDictionary, indent = 4, sort_keys = True))
+    s = json.dumps(bigDictionary, indent = 4, sort_keys = True)
 except TypeError as error:
     print(error, file = sys.stderr)
     sys.exit(1)
+
+print(s)
 print()
 
 try:
