@@ -27,8 +27,8 @@ request = urllib.request.Request(url, headers = headers)
 try:
     infile = urllib.request.urlopen(request)
 except urllib.error.URLError as error:
-    print(error)
-    sys.exit(1, file = sys.stderr)
+    print(error, file = sys.stderr)
+    sys.exit(1)
 
 sequenceOfBytes = infile.read()
 infile.close()
