@@ -14,7 +14,7 @@ def stats(myList):
 myList = [10, 20, 50, 30, 20]
 (minimum, maximum, average) = stats(myList) #parens around the three variables are unnecessary
 
-print("minimum =", minimum)
-print("maximum =", maximum)
-print("average =", average)
+print(f"minimum = {minimum}")
+print(f"maximum = {maximum}")
+print(f"average = {average}")
 sys.exit(0)
