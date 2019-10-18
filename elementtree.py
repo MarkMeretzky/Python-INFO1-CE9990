@@ -75,4 +75,11 @@ if unit == None:
     sys.exit(1)
 
 print(f"The temperature is {value}° {unit}.")
+
+try:
+    print(f'The temperature is {temperature.attrib["value"]}° {temperature.attrib["unit"]}.')
+except KeyError as error
+    print(error, file = sys.stderr)
+    sys.exit(1)
+
 sys.exit(0)
