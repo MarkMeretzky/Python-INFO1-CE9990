@@ -12,13 +12,12 @@ import sqlite3
 import datetime
 import textwrap   #no output lines will be longer than 80 characters
 
-url = "https://data.cityofnewyork.us/api/views/43nn-pn8j/rows.csv" \
-    "?accessType=DOWNLOAD"
+url = "https://data.cityofnewyork.us/api/views/43nn-pn8j/rows.csv"
 
 try:
     fileFromUrl = urllib.request.urlopen(url)
 except urllib.error.URLError as error:
-    print("urllib.error.URLError", error)
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 sequenceOfBytes = fileFromUrl.read()
@@ -28,8 +27,8 @@ fileFromUrl.close()
 
 try:
     s = sequenceOfBytes.decode("utf-8")   #s is a string
-except UnicodeError as unicodeError:
-    print(unicodeError)
+except UnicodeError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 #Change s back into a sequence of bytes so we can decode it again.
@@ -38,8 +37,8 @@ sequenceOfBytes = bytes(listOfInts)
 
 try:
     s = sequenceOfBytes.decode("utf-8")   #s is a string
-except UnicodeError as unicodeError:
-    print(unicodeError)
+except UnicodeError as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 fileFromString = io.StringIO(s)
@@ -117,7 +116,7 @@ try:
     cursor.execute(select)
     rows = cursor.fetchall()   #rows is a list
 except sqlite3.Error as error:
-    print(error)
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 for row in rows:
@@ -138,7 +137,7 @@ try:
     cursor.close()
     connection.close()
 except sqlite3.Error as error:
-    print(error)
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 sys.exit(0)
