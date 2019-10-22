@@ -1,9 +1,9 @@
 """
 passlist.py
 
-Pass a list or tuple to a function that expects one argument (line 24),
+Pass a list or tuple to a function that expects one argument (line 22),
 and to a function that expects to receive each item on the list as a separate
-argument (line 25).
+argument (line 23).
 """
 
 import sys
@@ -13,9 +13,7 @@ def threeArgs(arg0, arg1, arg2):
 
 def oneArg(arg0):
     assert isinstance(arg0, list) or isinstance(arg0, tuple)
-    print("oneArg:", end = "")
-    for arg in arg0:
-        print(f" {arg}", end = "")
+    print(" ".join(arg0))
     print()
 
 threeArgs("Moe", "Larry", "Curly")
