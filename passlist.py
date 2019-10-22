@@ -13,7 +13,7 @@ def threeArgs(arg0, arg1, arg2):
 
 def oneArg(arg0):
     assert isinstance(arg0, list) or isinstance(arg0, tuple)
-    print(f'oneArg: {" ".join(arg0)}')
+    print(f'oneArg:    {" ".join(arg0)}')
 
 threeArgs("Moe", "Larry", "Curly")
 
