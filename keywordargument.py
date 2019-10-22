@@ -15,4 +15,8 @@ def printLocation(latitude, longitude, altitude = 0):
 printLocation(40, -74)
 printLocation(40, -74, 1000)
 printLocation(40, -74, altitude = 1000)
+print()
+
+printLocation(latitude = 40, longitude = -74)
+printLocation(longitude = -74, latitude = 40)
 sys.exit(0)
