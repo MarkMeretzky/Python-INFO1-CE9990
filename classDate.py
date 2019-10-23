@@ -16,7 +16,7 @@ class Date(object):
     lengths = [
         None,
         31, #January
-        28, #February
+        28, #February (assume the year is not leap)
         31, #March
         30, #April
         31, #May
@@ -31,8 +31,8 @@ class Date(object):
 
     def __init__(self, month, day, year):
         assert isinstance(year, int)
-        assert isinstance(month, int) and 1 <= month and month <= 12
-        assert isinstance(day, int) and 1 <= day and day <= Date.lengths[month]
+        assert isinstance(month, int) and 1 <= month <= 12
+        assert isinstance(day, int) and 1 <= day <= Date.lengths[month]
         self.year = year
         self.month = month
         self.day = day
@@ -56,7 +56,7 @@ class Date(object):
         return f"{self.month:02}/{self.day:02}/{self.year:04}"
 
     def dayOfYear(self):
-        "Return my day of the year: a number in the range 1 to 365 inclusive."
+        "Return my day of the year, a number in the range 1 to 365 inclusive."
         return sum(Date.lengths[1:self.month]) + self.day
 
     def nextDay(self):
@@ -91,14 +91,14 @@ print("type(d) =", type(d))
 print()
 
 #These three statements do the same thing:
-print("d =", d)
-print("d =", str(d))
-print("d =", d.__str__())      #Call the instance method in line 54.
+print(f"d = {d}")
+print(f"d = {str(d)}")
+print(f"d = {d.__str__()}")    #Call the instance method in line 54.
 print()
 
-print("month =", d.getMonth()) #Call the instance method in line 46.
-print("day =", d.getDay())     #Call the instance method in line 50.
-print("year =", d.getYear())   #Call the instance method in line 42.
+print(f"month = {d.getMonth()}") #Call the instance method in line 46.
+print(f"day = {d.getDay()}")     #Call the instance method in line 50.
+print(f"year = {d.getYear()}")   #Call the instance method in line 42.
 print()
 
 print(f"{d} is day number {d.dayOfYear()} of the year {d.getYear()}.")
