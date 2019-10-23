@@ -74,7 +74,7 @@ class Date(object):
     def nextDays(self, n):
         "Move myself n days into the future."
         assert isinstance(n, int) and n >= 0
-        for i in range(n):
+        for _ in range(n):
             self.nextDay()     #Call the instance method in line 62.
 
     @staticmethod
