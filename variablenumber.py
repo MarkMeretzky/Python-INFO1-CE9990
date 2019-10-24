@@ -7,6 +7,7 @@ Pass a variable number of arguments to a function.
 import sys
 
 def myPrint(*args):
+    "Receive a variable number of arguments and print them."
     assert isinstance(args, tuple)
     listOfStrings = [str(arg) for arg in args]
     oneBigString = " ".join(listOfStrings)
