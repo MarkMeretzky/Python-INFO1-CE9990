@@ -10,7 +10,7 @@ def myPrint(*args):
     assert isinstance(args, tuple)
     listOfStrings = [str(arg) for arg in args]
     oneBigString = " ".join(listOfStrings)
-    print(f"myPrint received {len(args)} argument(s): {oneBigString)}")
+    print(f"myPrint received {len(args)} argument(s): {oneBigString}")
 
 myPrint()                        #0 arguments
 myPrint(10)                      #1 argument
