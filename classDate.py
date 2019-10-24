@@ -85,9 +85,9 @@ class Date(object):
     #The definition of class Date ends here.
 
 
-print("months in year =", Date.monthsInYear())
+print(f"months in year = {Date.monthsInYear()}")
 d = Date(12, 31, 2019)         #Call the instance method in line 32.
-print("type(d) =", type(d))
+print(f"type(d) = {type(d)}")
 print()
 
 #These three statements do the same thing:
