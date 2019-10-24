@@ -78,7 +78,7 @@ class Date(object):
             self.nextDay()     #Call the instance method in line 62.
 
     @staticmethod
-    def monthsInYear():
+    def monthsInYear():   #selfless
         "Return the number of months in a year.  This function is selfless."
         return len(Date.lengths) - 1;
 
