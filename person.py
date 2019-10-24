@@ -6,7 +6,7 @@ Put some attributes into an initially empty object.
 
 import sys
 
-class Person(object):
+class Person(object):   #The (object) is unnecessary: you get it anyway.
     pass
 
 
