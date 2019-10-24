@@ -8,7 +8,9 @@ import sys
 
 def myPrint(*args):
     assert isinstance(args, tuple)
-    print(f'myPrint received {len(args)} argument(s): {" ".join(args)}')
+    listOfStrings = [str(arg) for arg in args]
+    oneBigString = " ".join(listOfStrings)
+    print(f"myPrint received {len(args)} argument(s): {oneBigString)}")
 
 myPrint()                        #0 arguments
 myPrint(10)                      #1 argument
