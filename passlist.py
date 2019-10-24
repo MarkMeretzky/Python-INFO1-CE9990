@@ -22,6 +22,6 @@ def oneArg(arg0):
 threeArgs("Moe", "Larry", "Curly")
 stooges = ["Moe", "Larry", "Curly"]
 oneArg(stooges)
-threeArgs(*stooges)
+threeArgs(*stooges)   #The asterisk unpacks the list.
      
 sys.exit(0)
