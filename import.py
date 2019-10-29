@@ -9,7 +9,7 @@ import os   #operating system
 try:
     import date   #the date.py that we wrote
 except ModuleNotFoundError as error:
-    print(error)
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 print(f"The current directory is {os.getcwd()}")
@@ -26,13 +26,13 @@ print()
 try:
     d = date.Date(12, 31, 2019)
 except TypeError as error:
-    print(error)
+    print(error, file = sys.stderr)
     sys.exit(1)
 except ValueError as error:
-    print(error)
+    print(error, file = sys.stderr)
     sys.exit(1)
 
-print("d =", d)
-print("type(d) =", type(d))
+print(f"d = {d}")
+print(f"type(d) = {type(d)}")
 
 sys.exit(0)
