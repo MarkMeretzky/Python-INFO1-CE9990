@@ -1,5 +1,5 @@
 """
-import.py
+importer.py
 Demonstrate that we can import a module we wrote.
 """
 
@@ -20,7 +20,7 @@ print()
 
 print("The following module has been loaded:")
 print(sys.modules["date"])   #sys.modules is a dictionary.
-print(date.__file__)
+print(f"date.__file__ = {date.__file__}")
 print()
 
 try:
