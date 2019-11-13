@@ -7,7 +7,7 @@ Read and print a text file, line by line.
 import sys
 
 #macOS
-filename = "/Library/Frameworks/Python.framework/Versions/3.7/share/doc/python3.7/examples/Tools/demo/README"
+filename = "/Library/Frameworks/Python.framework/Versions/3.8/share/doc/python3.8/examples/Tools/demo/README"
 
 #Microsoft Windows
 #filename = r"C:\Users\Myname\AppData\Local\Programs\Python\Python37-32\Tools\demo\README"
