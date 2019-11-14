@@ -45,7 +45,7 @@ for tweet in tweets:
     print(f"Source = {tweet.source}")
     print(f"Source URL = {tweet.source_url}")
     print(f"Length = {len(tweet.text)}")
-    print(replaceEmojis(tweet.text)")
+    print(replaceEmojis(tweet.text))
     print(80 * "-")
 
 sys.exit(0)
