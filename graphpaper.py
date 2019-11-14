@@ -45,8 +45,8 @@ def draw(rowsOfBoxes, columnsOfBoxes, rowsOfSpaces, columnsOfSpaces):
 
 if __name__ == "__main__":
     import sys
-    rowsOfBoxes     = int(input("How many rows of boxes? "))
-    columnsOfBoxes  = int(input("How many columns of boxes? "))
+    rowsOfBoxes     = int(input("How many rows of boxes (e.g., 3)? "))
+    columnsOfBoxes  = int(input("How many columns of boxes(e.g., 4)? "))
     rowsOfSpaces    = int(input("How many rows of spaces in each box (e.g., 1)? "))
     columnsOfSpaces = int(input("How many columns of spaces in each box (e.g., 3)? "))
     s = draw(rowsOfBoxes, columnsOfBoxes, rowsOfSpaces, columnsOfSpaces)
