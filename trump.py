@@ -32,7 +32,7 @@ def replaceEmojis(s):
     does not belong to the BMP) replaced by the Unicode replacement character.
     """
     listOfCharacters = ["\uFFFD" if ord(c) >= 0x10000 else c for c in s]
-    return "".join(listOfCharacters)   #Change the list into a string.
+    return "".join(listOfCharacters)   #Change the list back into a string.
 
 for tweet in tweets:
     print(f"Created at = {tweet.created_at}")
