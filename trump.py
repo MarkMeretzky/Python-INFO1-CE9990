@@ -23,7 +23,7 @@ api = tweepy.API(auth_handler = authenticationHandler)
 try:
     tweets = api.search("Trump", count = 3) #tweets is iterable.
 except tweepy.error.TweepError as error:
-    print(error)
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 def replaceEmojis(s):
@@ -35,17 +35,17 @@ def replaceEmojis(s):
     return "".join(listOfCharacters)   #Change the list into a string.
 
 for tweet in tweets:
-    print("Created at =", tweet.created_at)
-    print("Author =", replaceEmojis(tweet.author.name))
-    print("Screen name =", tweet.author.screen_name)
-    print("Friends count =", tweet.author.friends_count)
-    print("Followers count =", tweet.author.followers_count)
-    print("Retweet count =", tweet.retweet_count)
-    print("Place =", tweet.place)
-    print("Source =", tweet.source)
-    print("Source URL =", tweet.source_url)
-    print("Length =", len(tweet.text))
-    print(replaceEmojis(tweet.text))
+    print(f"Created at = {tweet.created_at}")
+    print(f"Author = {replaceEmojis(tweet.author.name)}")
+    print(f"Screen name = {tweet.author.screen_name}")
+    print(f"Friends count = {tweet.author.friends_count}")
+    print(f"Followers count = {tweet.author.followers_count}")
+    print(f"Retweet count = {tweet.retweet_count}")
+    print(f"Place = {tweet.place}")
+    print(f"Source = {tweet.source}")
+    print(f"Source URL = {tweet.source_url}")
+    print(f"Length = {len(tweet.text)}")
+    print(replaceEmojis(tweet.text)")
     print(80 * "-")
 
 sys.exit(0)
