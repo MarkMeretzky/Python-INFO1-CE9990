@@ -13,12 +13,12 @@ class TestGraphpaper(unittest.TestCase):
     def test_type(self):
         "Does draw raise a TypeError if an argument is a non-integer?"
         n = 4   #number of arguments of graphpaper.draw
-        badArgs = (None, "", 1.0, (), [], {})    #True and False are ints.
+        badArgs = (None, "", 1.0, (), [], {}, set())    #True and False are ints.
         for i in range(n):
-            for j in range(len(badArgs)):
+            for badArg in badArgs):
                 with self.assertRaises(TypeError):
-                    args = n * [1]         #a list of n copies of 1
-                    args[i] = badArgs[j]   #Introduce a bad argument.
+                    args = n * [1]     #a list of n copies of 1
+                    args[i] = badArg   #Introduce a bad argument.
                     graphpaper.draw(*args)
 
     def test_range(self):
