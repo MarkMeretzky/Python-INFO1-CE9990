@@ -7,7 +7,7 @@ Demonstrate the generator float.range.
 import sys
 import float   #the module float.py that we wrote
 
-#The built-in range: print the integers from 0 to 10 inclusive.
+#The built-in range: print the 11 integers from 0 to 10 inclusive.
 for i in range(10 + 1):
     print(i)
 print()
@@ -23,11 +23,8 @@ try:
     else:
         print(".7 is not in the float.range.")
 
-except TypeError as error:
-    print(error)
-    sys.exit(1)
-except ValueError as error:
-    print(error)
+except BaseException as error:
+    print(error, file = sys.stderr)
     sys.exit(1)
 
 sys.exit(0)
