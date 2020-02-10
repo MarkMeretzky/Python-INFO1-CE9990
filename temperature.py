@@ -13,11 +13,13 @@ import sys
 import urllib.request
 import json
 
-url = "http://api.openweathermap.org/data/2.5/weather" \
-    "?q=10004,US" \
-    "&units=imperial" \
-    "&mode=json" \
+url = (
+    "http://api.openweathermap.org/data/2.5/weather"
+    "?q=10004,US"
+    "&units=imperial"
+    "&mode=json"
     "&APPID=532d313d6a9ec4ea93eb89696983e369"
+)
 
 try:
     infile = urllib.request.urlopen(url)
@@ -33,12 +35,14 @@ try:
 except UnicodeError as unicodeError:
     print(" UnicodeError", unicodeError)
     sys.exit(1)
+#print(s)
 
 try:
     dictionary = json.loads(s)          #dictionary is a dictionary.
 except json.JSONDecodeError as jSONDecodeError:
     print("json.JSONDecodeError", jSONDecodeError)
     sys.exit(1)
+#print(json.dumps(dictionary, indent = 4))
 
 try:
     main = dictionary["main"]               #main is a dictionary
