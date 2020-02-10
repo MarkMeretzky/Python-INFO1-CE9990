@@ -42,7 +42,7 @@ try:
 except json.JSONDecodeError as jSONDecodeError:
     print("json.JSONDecodeError", jSONDecodeError)
     sys.exit(1)
-#print(json.dumps(dictionary, indent = 4))
+#print(json.dumps(dictionary, indent = 4))  #pretty print the json
 
 try:
     main = dictionary["main"]               #main is a dictionary
