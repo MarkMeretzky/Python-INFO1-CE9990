@@ -13,6 +13,7 @@ import sys
 import urllib.request
 import json
 
+//Better to call urllib.parse.urlencode to assemble the URL.
 url = (
     "http://api.openweathermap.org/data/2.5/weather"
     "?q=10004,US"
